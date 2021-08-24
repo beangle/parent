@@ -29,10 +29,14 @@ object Dependencies extends sbt.AutoPlugin {
   val logback_core = "ch.qos.logback" % "logback-core" % "1.3.0-alpha9"
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.21"
 
+  val spring_beans ="org.springframework" % "spring-beans" % "5.3.6"
+  val spring_context ="org.springframework" % "spring-context" % "5.3.6"
+
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "5.0.0"
 
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.9" % "test"
   val mockito = "org.mockito" % "mockito-core" % "3.11.1" % "test"
+  val h2 ="com.h2database" %"h2"% "1.4.200" % "test"
 
   override def trigger = allRequirements
 
