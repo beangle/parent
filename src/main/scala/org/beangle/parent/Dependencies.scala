@@ -22,12 +22,17 @@ import sbt._
 
 object Dependencies extends sbt.AutoPlugin {
 
+  val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.0.1"
+
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.0-alpha4"
-  val scalatest = "org.scalatest" %% "scalatest" % "3.2.9" % "test"
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.3.0-alpha9"
   val logback_core = "ch.qos.logback" % "logback-core" % "1.3.0-alpha9"
-
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.21"
+
+  val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "5.0.0"
+
+  val scalatest = "org.scalatest" %% "scalatest" % "3.2.9" % "test"
+  val mockito = "org.mockito" % "mockito-core" % "3.11.1" % "test"
 
   override def trigger = allRequirements
 
