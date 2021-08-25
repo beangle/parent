@@ -27,11 +27,21 @@ object Dependencies extends sbt.AutoPlugin {
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.0-alpha4"
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.21"
 
-  val spring_beans ="org.springframework" % "spring-beans" % "5.3.6"
-  val spring_context ="org.springframework" % "spring-context" % "5.3.6"
+
+  //web
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "5.0.0"
   var freemarker = "org.freemarker" % "freemarker" % "2.3.31"
+
+  //cdi
+  val spring_beans ="org.springframework" % "spring-beans" % "5.3.6"
+  val spring_context ="org.springframework" % "spring-context" % "5.3.6"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.15.8"
+
+  //cache
+  val ehcache = "org.ehcache" % "ehcache" % "3.9.5"
+  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.0.3"
+  val jgroups = "org.jgroups" % "jgroups" % "5.1.8.Final"
+  val jedis = "redis.clients" % "jedis" % "3.6.3"
 
   //runtime
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.3.0-alpha9"  % "provided"
