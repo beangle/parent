@@ -35,7 +35,19 @@ object Dependencies extends sbt.AutoPlugin {
   //cdi
   val spring_beans ="org.springframework" % "spring-beans" % "5.3.6"
   val spring_context ="org.springframework" % "spring-context" % "5.3.6"
+  val spring_tx = "org.springframework" % "spring-tx" % "5.3.6"
+  val spring_aop = "org.springframework" % "spring-aop" % "5.3.6"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "5.3.6"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.15.8"
+
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "5.5.6.Final"
+  val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "5.5.6.Final"  % "test" exclude("org.hibernate","hibernate-core")
+  val javassist = "org.javassist" % "javassist" % "3.27.0-GA"
+  val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.0.0"
+
+  val poi = "org.apache.poi" % "poi" % "4.1.2"
+  val jxls = "org.jxls" % "jxls" % "2.10.0"
+  val jxls_poi = "org.jxls" % "jxls-poi" % "2.10.0"
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.9.5"
@@ -51,6 +63,10 @@ object Dependencies extends sbt.AutoPlugin {
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.9" % "test"
   val mockito = "org.mockito" % "mockito-core" % "3.11.1" % "test"
   val h2 ="com.h2database" %"h2"% "1.4.200" % "test"
+
+  //provided
+  val postgresql = "org.postgresql" % "postgresql" % "42.2.20" % "provided"
+  val HikariCP = "com.zaxxer" % "HikariCP" % "4.0.3" % "provided"
 
   override def trigger = allRequirements
 

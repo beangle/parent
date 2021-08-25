@@ -43,6 +43,7 @@ object Settings extends sbt.AutoPlugin {
       val nexus = "https://oss.sonatype.org/"
       Some("releases" at nexus + "service/local/staging/deploy/maven2")
     },
-    credentials += Credentials(Path.userHome / ".sbt" / "sonatype_credentials")
+    credentials += Credentials(Path.userHome / ".sbt" / "sonatype_credentials"),
+    resolvers += Resolver.mavenLocal
   )
 }
