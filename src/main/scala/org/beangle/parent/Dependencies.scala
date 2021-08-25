@@ -55,6 +55,10 @@ object Dependencies extends sbt.AutoPlugin {
   val jgroups = "org.jgroups" % "jgroups" % "5.1.8.Final"
   val jedis = "redis.clients" % "jedis" % "3.6.3"
 
+  //mail
+  val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "1.6.5"
+  val jakarta_mail = "com.sun.mail" % "jakarta.mail" % "1.6.5"
+
   //runtime
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.3.0-alpha9"  % "provided"
   val logback_core = "ch.qos.logback" % "logback-core" % "1.3.0-alpha9"  % "provided"
@@ -63,6 +67,7 @@ object Dependencies extends sbt.AutoPlugin {
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.9" % "test"
   val mockito = "org.mockito" % "mockito-core" % "3.11.1" % "test"
   val h2 ="com.h2database" %"h2"% "1.4.200" % "test"
+  val greenmail = "com.icegreen" % "greenmail" % "1.6.1" % "test"
 
   //provided
   val postgresql = "org.postgresql" % "postgresql" % "42.2.20" % "provided"
