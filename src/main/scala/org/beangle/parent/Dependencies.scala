@@ -45,9 +45,18 @@ object Dependencies extends sbt.AutoPlugin {
   val javassist = "org.javassist" % "javassist" % "3.27.0-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.0.0"
 
+  val jna = "net.java.dev.jna" % "jna" % "5.8.0"
+
+  //doc
   val poi = "org.apache.poi" % "poi" % "4.1.2"
+  val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "4.1.2"
   val jxls = "org.jxls" % "jxls" % "2.10.0"
   val jxls_poi = "org.jxls" % "jxls-poi" % "2.10.0"
+  val itextpdf="com.itextpdf" % "itextpdf" % "5.5.13.2"
+  val itext_asian="com.itextpdf" % "itext-asian" % "5.2.0"
+  val itext_xmlworker="com.itextpdf.tool" % "xmlworker" % "5.5.13.2"
+  val bcprov_jdk15to18 = "org.bouncycastle" % "bcprov-jdk15to18" % "1.68"
+  val bcpkix_jdk15to18 = "org.bouncycastle" % "bcpkix-jdk15to18" % "1.68"
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.9.5"
