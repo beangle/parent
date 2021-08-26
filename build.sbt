@@ -24,6 +24,6 @@ ThisBuild / developers := List(
 lazy val root = (project in file("."))
   .enablePlugins(SbtPlugin)
   .settings(
-    name := "sbt-beangle-parent",
+    name := "sbt-parent",
     commonSettings
   )
