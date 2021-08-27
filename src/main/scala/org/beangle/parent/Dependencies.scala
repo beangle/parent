@@ -44,7 +44,7 @@ object Dependencies extends sbt.AutoPlugin {
   val javassist = "org.javassist" % "javassist" % "3.27.0-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.0.0"
 
-  val jna = "net.java.dev.jna" % "jna" % "5.8.0"
+  val jna = "net.java.dev.jna" % "jna" % "5.9.0"
 
   //doc
   val poi = "org.apache.poi" % "poi" % "4.1.2"
@@ -73,17 +73,17 @@ object Dependencies extends sbt.AutoPlugin {
   val mockito = "org.mockito" % "mockito-core" % "3.11.1" % "test"
   val greenmail = "com.icegreen" % "greenmail" % "1.6.1" % "test"
 
-  //provided
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.3.0-alpha9" % "provided"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.3.0-alpha9" % "provided"
-  val postgresql = "org.postgresql" % "postgresql" % "42.2.20" % "provided"
-  val h2 = "com.h2database" % "h2" % "1.4.200" % "provided"
-  val HikariCP = "com.zaxxer" % "HikariCP" % "4.0.3" % "provided"
-  val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1" % "provided"
-  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "21.1.0.0" % "provided"
-  val orai18n = "com.oracle.database.nls" % "orai18n" % "21.1.0.0" % "provided"
-  val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.24" % "provided"
-  val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "9.2.1.jre11" % "provided"
+  //runtime
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.3.0-alpha9"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.3.0-alpha9"
+  val postgresql = "org.postgresql" % "postgresql" % "42.2.23"
+  val h2 = "com.h2database" % "h2" % "1.4.200"
+  val HikariCP = "com.zaxxer" % "HikariCP" % "4.0.3"
+  val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
+  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "21.1.0.0"
+  val orai18n = "com.oracle.database.nls" % "orai18n" % "21.1.0.0"
+  val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.24"
+  val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "9.2.1.jre11"
 
   override def trigger = allRequirements
 
