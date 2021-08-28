@@ -31,6 +31,10 @@ object Dependencies extends sbt.AutoPlugin {
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "5.0.0"
   var freemarker = "org.freemarker" % "freemarker" % "2.3.31"
 
+  val gson = "com.google.code.gson" % "gson" % "2.8.6"
+  //some old library need jaxb for xml parsing(ehcache3)
+  val jaxb="javax.xml.bind" % "jaxb-api" % "2.3.1" exclude("xml-apis","xml-apis")
+  val jaxb_impl = "com.sun.xml.bind" % "jaxb-impl" % "2.3.5"
   //cdi
   val spring_beans = "org.springframework" % "spring-beans" % "5.3.6"
   val spring_context = "org.springframework" % "spring-context" % "5.3.6"
@@ -78,7 +82,7 @@ object Dependencies extends sbt.AutoPlugin {
   val logback_core = "ch.qos.logback" % "logback-core" % "1.3.0-alpha9"
   val postgresql = "org.postgresql" % "postgresql" % "42.2.23"
   val h2 = "com.h2database" % "h2" % "1.4.200"
-  val HikariCP = "com.zaxxer" % "HikariCP" % "4.0.3"
+  val HikariCP = "com.zaxxer" % "HikariCP" % "5.0.0"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
   val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "21.1.0.0"
   val orai18n = "com.oracle.database.nls" % "orai18n" % "21.1.0.0"
