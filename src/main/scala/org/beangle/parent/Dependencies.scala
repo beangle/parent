@@ -25,6 +25,7 @@ object Dependencies extends sbt.AutoPlugin {
   val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.0.1"
 
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.0-alpha4"
+  val jcl_over_slf4j =  "org.slf4j" % "jcl-over-slf4j" % "2.0.0-alpha4"
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.21"
 
   //web
@@ -33,7 +34,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   val gson = "com.google.code.gson" % "gson" % "2.8.6"
   //some old library need jaxb for xml parsing(ehcache3)
-  val jaxb="javax.xml.bind" % "jaxb-api" % "2.3.1" exclude("xml-apis","xml-apis")
+  val jaxb = "javax.xml.bind" % "jaxb-api" % "2.3.1" exclude("xml-apis", "xml-apis")
   val jaxb_impl = "com.sun.xml.bind" % "jaxb-impl" % "2.3.5"
   //cdi
   val spring_beans = "org.springframework" % "spring-beans" % "5.3.6"
@@ -88,6 +89,9 @@ object Dependencies extends sbt.AutoPlugin {
   val orai18n = "com.oracle.database.nls" % "orai18n" % "21.1.0.0"
   val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.24"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "9.2.1.jre11"
+
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.0.10"
+  val io_undertow = "io.undertow" % "undertow-core" % "2.2.10.Final"
 
   override def trigger = allRequirements
 
