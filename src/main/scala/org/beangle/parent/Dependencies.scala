@@ -54,8 +54,6 @@ object Dependencies extends sbt.AutoPlugin {
   //doc
   val poi = "org.apache.poi" % "poi" % "4.1.2"
   val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "4.1.2"
-  val jxls = "org.jxls" % "jxls" % "2.10.0"
-  val jxls_poi = "org.jxls" % "jxls-poi" % "2.10.0"
   val itextpdf = "com.itextpdf" % "itextpdf" % "5.5.13.2"
   val itext_asian = "com.itextpdf" % "itext-asian" % "5.2.0"
   val itext_xmlworker = "com.itextpdf.tool" % "xmlworker" % "5.5.13.2"
@@ -76,7 +74,7 @@ object Dependencies extends sbt.AutoPlugin {
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.10" % "test"
   val mockito = "org.mockito" % "mockito-core" % "3.12.4" % "test"
-  val greenmail = "com.icegreen" % "greenmail" % "1.6.5" % "test"
+  val greenmail = "com.icegreen" % "greenmail" % "2.0.0-alpha-2" % "test"
 
   //runtime
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.3.0-alpha10"
