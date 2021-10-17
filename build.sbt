@@ -1,7 +1,7 @@
 import BuildSettings._
 import sbt._
 
-ThisBuild / version := "0.3.1"
+ThisBuild / version := "0.3.2"
 ThisBuild / description := "Beangle Parent."
 ThisBuild / organization := "org.beangle.parent"
 ThisBuild / homepage := Some(url("https://github.com/beangle/parent"))
@@ -24,6 +24,6 @@ ThisBuild / developers := List(
 lazy val root = (project in file("."))
   .enablePlugins(SbtPlugin)
   .settings(
-    name := "sbt-parent",
+    name := "sbt-beangle-parent",
     commonSettings
   )
