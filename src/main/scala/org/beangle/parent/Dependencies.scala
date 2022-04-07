@@ -89,7 +89,8 @@ object Dependencies extends sbt.AutoPlugin {
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "10.2.0.jre11"
 
   val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.0.20"
-  val io_undertow = "io.undertow" % "undertow-core" % "2.2.17.Final"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.2.17.Final"
+  val io_undertow_servlet = "io.undertow" % "undertow-servlet-jakarta" % "2.2.17.Final"
 
   override def trigger = allRequirements
 
