@@ -22,7 +22,7 @@ import sbt._
 
 object Dependencies extends sbt.AutoPlugin {
 
-  val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.0.1"
+  val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
 
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.0-alpha7"
   val jcl_over_slf4j =  "org.slf4j" % "jcl-over-slf4j" % "2.0.0-alpha7"
@@ -54,11 +54,11 @@ object Dependencies extends sbt.AutoPlugin {
   //doc
   val poi = "org.apache.poi" % "poi" % "4.1.2"
   val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "4.1.2"
-  val itextpdf = "com.itextpdf" % "itextpdf" % "5.5.13.2"
+  val itextpdf = "com.itextpdf" % "itextpdf" % "5.5.13.3"
   val itext_asian = "com.itextpdf" % "itext-asian" % "5.2.0"
-  val itext_xmlworker = "com.itextpdf.tool" % "xmlworker" % "5.5.13.2"
-  val bcprov_jdk15to18 = "org.bouncycastle" % "bcprov-jdk15to18" % "1.69"
-  val bcpkix_jdk15to18 = "org.bouncycastle" % "bcpkix-jdk15to18" % "1.69"
+  val itext_xmlworker = "com.itextpdf.tool" % "xmlworker" % "5.5.13.3"
+  val bcprov_jdk15to18 = "org.bouncycastle" % "bcprov-jdk15to18" % "1.71"
+  val bcpkix_jdk15to18 = "org.bouncycastle" % "bcpkix-jdk15to18" % "1.71"
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.10.0"
