@@ -1,7 +1,6 @@
 # What is Beangle?
 
-__Beangle__ is a java based enterprise software developmentsuite, providing quick, based on conventions (Convention Over Configuration) scaffolding and toolkits. Efforts to streamline the project build, project development and standardized practices, the formation of easy management best practices.
-
+__Beangle__ is an enterprise software development suite, providing quick, based on conventions (Convention Over Configuration) scaffolding and toolkits. Efforts to streamline the project build, project development and standardized practices, the formation of easy management best practices.
 
 Beanlge will use [Yourkit](http://www.yourkit.com) profile component performance.
 
