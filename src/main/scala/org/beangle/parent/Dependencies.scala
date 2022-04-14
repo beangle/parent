@@ -44,8 +44,8 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_jdbc = "org.springframework" % "spring-jdbc" % "5.3.18"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.20.0"
 
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "5.6.7.Final"
-  val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "5.6.7.Final" exclude("org.hibernate", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "5.6.8.Final"
+  val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "5.6.8.Final" exclude("org.hibernate", "hibernate-core")
   val javassist = "org.javassist" % "javassist" % "3.28.0-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.0.0"
 
