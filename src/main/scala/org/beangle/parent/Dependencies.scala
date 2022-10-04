@@ -24,8 +24,8 @@ object Dependencies extends sbt.AutoPlugin {
 
   val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
 
-  val slf4j = "org.slf4j" % "slf4j-api" % "2.0.0"
-  val jcl_over_slf4j =  "org.slf4j" % "jcl-over-slf4j" % "2.0.0-alpha7"
+  val slf4j = "org.slf4j" % "slf4j-api" % "2.0.3"
+  val jcl_over_slf4j =  "org.slf4j" % "jcl-over-slf4j" % "2.0.3"
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.21"
 
   //web
@@ -37,11 +37,11 @@ object Dependencies extends sbt.AutoPlugin {
   val jaxb = "javax.xml.bind" % "jaxb-api" % "2.3.1" exclude("xml-apis", "xml-apis")
   val jaxb_impl = "com.sun.xml.bind" % "jaxb-impl" % "2.3.6"
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "5.3.22"
-  val spring_context = "org.springframework" % "spring-context" % "5.3.22"
-  val spring_tx = "org.springframework" % "spring-tx" % "5.3.22"
-  val spring_aop = "org.springframework" % "spring-aop" % "5.3.22"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "5.3.22"
+  val spring_beans = "org.springframework" % "spring-beans" % "5.3.23"
+  val spring_context = "org.springframework" % "spring-context" % "5.3.23"
+  val spring_tx = "org.springframework" % "spring-tx" % "5.3.23"
+  val spring_aop = "org.springframework" % "spring-aop" % "5.3.23"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "5.3.23"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.21.5"
 
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "5.6.8.Final"
@@ -77,8 +77,8 @@ object Dependencies extends sbt.AutoPlugin {
   val greenmail = "com.icegreen" % "greenmail" % "2.0.0-alpha-2" % "test"
 
   //runtime
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.0"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.0"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.3"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.3"
   val postgresql = "org.postgresql" % "postgresql" % "42.5.0"
   val h2 = "com.h2database" % "h2" % "2.1.214"
   val HikariCP = "com.zaxxer" % "HikariCP" % "5.0.1"
