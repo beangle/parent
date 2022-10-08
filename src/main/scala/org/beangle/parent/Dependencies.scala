@@ -29,7 +29,7 @@ object Dependencies extends sbt.AutoPlugin {
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.21"
 
   //web
-  val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "5.0.0"
+  val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "6.0.0"
   var freemarker = "org.freemarker" % "freemarker" % "2.3.31"
 
   val gson = "com.google.code.gson" % "gson" % "2.9.1"
@@ -88,9 +88,9 @@ object Dependencies extends sbt.AutoPlugin {
   val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.30"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "10.2.1.jre11"
 
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.0.23"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.2.18.Final"
-  val io_undertow_servlet = "io.undertow" % "undertow-servlet-jakarta" % "2.2.18.Final"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.0"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.0.Beta1"
+  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.0.Beta1"
 
   override def trigger = allRequirements
 
