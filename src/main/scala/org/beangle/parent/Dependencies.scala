@@ -32,17 +32,14 @@ object Dependencies extends sbt.AutoPlugin {
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "6.0.0"
   var freemarker = "org.freemarker" % "freemarker" % "2.3.31"
 
-  val gson = "com.google.code.gson" % "gson" % "2.9.1"
-  //some old library need jaxb for xml parsing(ehcache3)
-  val jaxb = "javax.xml.bind" % "jaxb-api" % "2.3.1" exclude("xml-apis", "xml-apis")
-  val jaxb_impl = "com.sun.xml.bind" % "jaxb-impl" % "2.3.6"
+  val gson = "com.google.code.gson" % "gson" % "2.10"
   //cdi
   val spring_beans = "org.springframework" % "spring-beans" % "5.3.23"
   val spring_context = "org.springframework" % "spring-context" % "5.3.23"
   val spring_tx = "org.springframework" % "spring-tx" % "5.3.23"
   val spring_aop = "org.springframework" % "spring-aop" % "5.3.23"
   val spring_jdbc = "org.springframework" % "spring-jdbc" % "5.3.23"
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.21.5"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.21.8"
 
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "5.6.8.Final"
   val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "5.6.8.Final" exclude("org.hibernate", "hibernate-core")
@@ -57,40 +54,40 @@ object Dependencies extends sbt.AutoPlugin {
   val itextpdf = "com.itextpdf" % "itextpdf" % "5.5.13.3"
   val itext_asian = "com.itextpdf" % "itext-asian" % "5.2.0"
   val itext_xmlworker = "com.itextpdf.tool" % "xmlworker" % "5.5.13.3"
-  val bcprov_jdk15to18 = "org.bouncycastle" % "bcprov-jdk15to18" % "1.71"
-  val bcpkix_jdk15to18 = "org.bouncycastle" % "bcpkix-jdk15to18" % "1.71"
+  val bcprov_jdk15to18 = "org.bouncycastle" % "bcprov-jdk15to18" % "1.72"
+  val bcpkix_jdk15to18 = "org.bouncycastle" % "bcpkix-jdk15to18" % "1.72"
 
   //cache
-  val ehcache = "org.ehcache" % "ehcache" % "3.10.1"
+  val ehcache = "org.ehcache" % "ehcache" % "3.10.2"
   val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.1"
   val jgroups = "org.jgroups" % "jgroups" % "5.2.4.Final"
-  val jedis = "redis.clients" % "jedis" % "4.2.3"
+  val jedis = "redis.clients" % "jedis" % "4.3.1"
 
   //mail
   val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.0.1"
   val jakarta_mail = "com.sun.mail" % "jakarta.mail" % "2.0.1"
 
-  val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2022.7"
+  val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2022.12"
   //test
-  val scalatest = "org.scalatest" %% "scalatest" % "3.2.13" % "test"
-  val mockito = "org.mockito" % "mockito-core" % "4.7.0" % "test"
+  val scalatest = "org.scalatest" %% "scalatest" % "3.2.14" % "test"
+  val mockito = "org.mockito" % "mockito-core" % "4.8.1" % "test"
   val greenmail = "com.icegreen" % "greenmail" % "2.0.0-alpha-2" % "test"
 
   //runtime
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.3"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.3"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.4"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.4"
   val postgresql = "org.postgresql" % "postgresql" % "42.5.0"
   val h2 = "com.h2database" % "h2" % "2.1.214"
   val HikariCP = "com.zaxxer" % "HikariCP" % "5.0.1"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
   val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "21.7.0.0"
   val orai18n = "com.oracle.database.nls" % "orai18n" % "21.7.0.0"
-  val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.30"
+  val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.31"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "10.2.1.jre11"
 
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.0"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.0.Beta1"
-  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.0.Beta1"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.1"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.0.Final"
+  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.0.Final"
 
   override def trigger = allRequirements
 
