@@ -34,12 +34,12 @@ object Dependencies extends sbt.AutoPlugin {
 
   val gson = "com.google.code.gson" % "gson" % "2.10.1"
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.0.4"
-  val spring_context = "org.springframework" % "spring-context" % "6.0.4"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.0.4"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.0.4"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.4"
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.21.12"
+  val spring_beans = "org.springframework" % "spring-beans" % "6.0.5"
+  val spring_context = "org.springframework" % "spring-context" % "6.0.5"
+  val spring_tx = "org.springframework" % "spring-tx" % "6.0.5"
+  val spring_aop = "org.springframework" % "spring-aop" % "6.0.5"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.5"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.22.0"
 
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.0.CR2"
   val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "6.2.0.CR2" exclude("org.hibernate", "hibernate-core")
@@ -59,7 +59,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.10.8"
-  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.2"
+  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.4"
   val jgroups = "org.jgroups" % "jgroups" % "5.2.12.Final"
   val jedis = "redis.clients" % "jedis" % "4.3.1"
 
@@ -76,18 +76,18 @@ object Dependencies extends sbt.AutoPlugin {
   //runtime
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.5"
   val logback_core = "ch.qos.logback" % "logback-core" % "1.4.5"
-  val postgresql = "org.postgresql" % "postgresql" % "42.5.3"
+  val postgresql = "org.postgresql" % "postgresql" % "42.5.4"
   val h2 = "com.h2database" % "h2" % "2.1.214"
   val HikariCP = "com.zaxxer" % "HikariCP" % "5.0.1"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
-  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "21.8.0.0"
-  val orai18n = "com.oracle.database.nls" % "orai18n" % "21.8.0.0"
+  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "21.9.0.0"
+  val orai18n = "com.oracle.database.nls" % "orai18n" % "21.9.0.0"
   val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.32"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "12.2.0.jre11"
 
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.5"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.3.Final"
-  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.3.Final"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.6"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.4.Final"
+  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.4.Final"
 
   override def trigger = allRequirements
 
