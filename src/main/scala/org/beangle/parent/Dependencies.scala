@@ -34,11 +34,11 @@ object Dependencies extends sbt.AutoPlugin {
 
   val gson = "com.google.code.gson" % "gson" % "2.10.1"
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.0.5"
-  val spring_context = "org.springframework" % "spring-context" % "6.0.5"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.0.5"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.0.5"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.5"
+  val spring_beans = "org.springframework" % "spring-beans" % "6.0.6"
+  val spring_context = "org.springframework" % "spring-context" % "6.0.6"
+  val spring_tx = "org.springframework" % "spring-tx" % "6.0.6"
+  val spring_aop = "org.springframework" % "spring-aop" % "6.0.6"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.6"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.22.0"
 
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.0.CR3"
@@ -86,7 +86,7 @@ object Dependencies extends sbt.AutoPlugin {
   val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.32"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "12.2.0.jre11"
 
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.6"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.7"
   val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.4.Final"
   val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.4.Final"
 
