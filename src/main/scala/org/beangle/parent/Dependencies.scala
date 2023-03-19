@@ -39,10 +39,10 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_tx = "org.springframework" % "spring-tx" % "6.0.6"
   val spring_aop = "org.springframework" % "spring-aop" % "6.0.6"
   val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.6"
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.22.0"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.22.2"
 
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.0.CR3"
-  val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "6.2.0.CR3" exclude("org.hibernate", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.0.CR4"
+  val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "6.2.0.CR4" exclude("org.hibernate", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.12.23"
   val javassist = "org.javassist" % "javassist" % "3.29.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
@@ -60,7 +60,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.10.8"
-  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.4"
+  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.5"
   val jgroups = "org.jgroups" % "jgroups" % "5.2.12.Final"
   val jedis = "redis.clients" % "jedis" % "4.3.1"
 
@@ -71,12 +71,12 @@ object Dependencies extends sbt.AutoPlugin {
   val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2022.14"
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.15" % "test"
-  val mockito = "org.mockito" % "mockito-core" % "5.1.1" % "test"
+  val mockito = "org.mockito" % "mockito-core" % "5.2.0" % "test"
   val greenmail = "com.icegreen" % "greenmail" % "2.0.0-alpha-3" % "test"
 
   //runtime
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.5"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.5"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.6"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.6"
   val postgresql = "org.postgresql" % "postgresql" % "42.5.4"
   val h2 = "com.h2database" % "h2" % "2.1.214"
   val HikariCP = "com.zaxxer" % "HikariCP" % "5.0.1"
