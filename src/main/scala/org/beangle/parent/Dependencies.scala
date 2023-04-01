@@ -34,15 +34,15 @@ object Dependencies extends sbt.AutoPlugin {
 
   val gson = "com.google.code.gson" % "gson" % "2.10.1"
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.0.6"
-  val spring_context = "org.springframework" % "spring-context" % "6.0.6"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.0.6"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.0.6"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.6"
+  val spring_beans = "org.springframework" % "spring-beans" % "6.0.7"
+  val spring_context = "org.springframework" % "spring-context" % "6.0.7"
+  val spring_tx = "org.springframework" % "spring-tx" % "6.0.7"
+  val spring_aop = "org.springframework" % "spring-aop" % "6.0.7"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.7"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.22.2"
 
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.0.CR4"
-  val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "6.2.0.CR4" exclude("org.hibernate", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.0.Final"
+  val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "6.2.0.Final" exclude("org.hibernate", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.12.23"
   val javassist = "org.javassist" % "javassist" % "3.29.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
