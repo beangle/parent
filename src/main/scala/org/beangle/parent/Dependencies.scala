@@ -24,9 +24,9 @@ object Dependencies extends sbt.AutoPlugin {
 
   val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
 
-  val slf4j = "org.slf4j" % "slf4j-api" % "2.0.6"
-  val jcl_over_slf4j =  "org.slf4j" % "jcl-over-slf4j" % "2.0.6"
-  val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.22"
+  val slf4j = "org.slf4j" % "slf4j-api" % "2.0.7"
+  val jcl_over_slf4j =  "org.slf4j" % "jcl-over-slf4j" % "2.0.7"
+  val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.23.0"
 
   //web
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "6.0.0"
@@ -34,15 +34,15 @@ object Dependencies extends sbt.AutoPlugin {
 
   val gson = "com.google.code.gson" % "gson" % "2.10.1"
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.0.7"
-  val spring_context = "org.springframework" % "spring-context" % "6.0.7"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.0.7"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.0.7"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.7"
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.22.2"
+  val spring_beans = "org.springframework" % "spring-beans" % "6.0.8"
+  val spring_context = "org.springframework" % "spring-context" % "6.0.8"
+  val spring_tx = "org.springframework" % "spring-tx" % "6.0.8"
+  val spring_aop = "org.springframework" % "spring-aop" % "6.0.8"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.8"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.22.3"
 
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.0.Final"
-  val hibernate_jcache = "org.hibernate" % "hibernate-jcache" % "6.2.0.Final" exclude("org.hibernate", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.1.Final"
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.1.Final" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.12.23"
   val javassist = "org.javassist" % "javassist" % "3.29.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
@@ -60,9 +60,9 @@ object Dependencies extends sbt.AutoPlugin {
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.10.8"
-  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.5"
-  val jgroups = "org.jgroups" % "jgroups" % "5.2.12.Final"
-  val jedis = "redis.clients" % "jedis" % "4.3.1"
+  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.6"
+  val jgroups = "org.jgroups" % "jgroups" % "5.2.13.Final"
+  val jedis = "redis.clients" % "jedis" % "4.3.2"
 
   //mail
   val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.0.1"
@@ -72,23 +72,23 @@ object Dependencies extends sbt.AutoPlugin {
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.15" % "test"
   val mockito = "org.mockito" % "mockito-core" % "5.2.0" % "test"
-  val greenmail = "com.icegreen" % "greenmail" % "2.0.0-alpha-3" % "test"
+  val greenmail = "com.icegreen" % "greenmail" % "2.0.0" % "test"
 
   //runtime
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.6"
   val logback_core = "ch.qos.logback" % "logback-core" % "1.4.6"
-  val postgresql = "org.postgresql" % "postgresql" % "42.5.4"
+  val postgresql = "org.postgresql" % "postgresql" % "42.6.0"
   val h2 = "com.h2database" % "h2" % "2.1.214"
   val HikariCP = "com.zaxxer" % "HikariCP" % "5.0.1"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
-  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "21.9.0.0"
-  val orai18n = "com.oracle.database.nls" % "orai18n" % "21.9.0.0"
+  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.2.0.0"
+  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.2.0.0"
   val mysql_connector_java = "mysql" % "mysql-connector-java" % "8.0.32"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "12.2.0.jre11"
 
   val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.7"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.4.Final"
-  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.4.Final"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.5.Final"
+  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.5.Final"
 
   override def trigger = allRequirements
 
