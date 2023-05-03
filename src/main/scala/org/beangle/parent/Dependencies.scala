@@ -41,8 +41,8 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.8"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.22.3"
 
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.1.Final"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.1.Final" exclude("org.hibernate.orm", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.2.Final"
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.2.Final" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.12.23"
   val javassist = "org.javassist" % "javassist" % "3.29.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
@@ -61,6 +61,8 @@ object Dependencies extends sbt.AutoPlugin {
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.10.8"
   val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.6"
+  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.1.6" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
+
   val jgroups = "org.jgroups" % "jgroups" % "5.2.13.Final"
   val jedis = "redis.clients" % "jedis" % "4.3.2"
 
@@ -75,8 +77,8 @@ object Dependencies extends sbt.AutoPlugin {
   val greenmail = "com.icegreen" % "greenmail" % "2.0.0" % "test"
 
   //runtime
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.6"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.6"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.7"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.7"
   val postgresql = "org.postgresql" % "postgresql" % "42.6.0"
   val h2 = "com.h2database" % "h2" % "2.1.214"
   val HikariCP = "com.zaxxer" % "HikariCP" % "5.0.1"
