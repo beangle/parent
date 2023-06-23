@@ -40,8 +40,8 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.9"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.23.2"
 
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.4.Final"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.4.Final" exclude("org.hibernate.orm", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.5.Final"
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.5.Final" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.12.23"
   val javassist = "org.javassist" % "javassist" % "3.29.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
@@ -64,6 +64,12 @@ object Dependencies extends sbt.AutoPlugin {
 
   val jgroups = "org.jgroups" % "jgroups" % "5.2.14.Final"
   val jedis = "redis.clients" % "jedis" % "4.4.1"
+  val lettuce = "io.lettuce" % "lettuce-core" % "6.2.4.RELEASE"
+
+  // network
+  val netty_common = "io.netty" % "netty-common" % "4.1.94.Final"
+  val netty_handler = "io.netty" % "netty-handler" % "4.1.94.Final"
+  val netty_transport = "io.netty" % "netty-transport" % "4.1.94.Final"
 
   //mail
   val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.0.1"
@@ -87,9 +93,9 @@ object Dependencies extends sbt.AutoPlugin {
   val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "8.0.33"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "12.2.0.jre11"
 
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.9"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.6.Final"
-  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.6.Final"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.10"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.7.Final"
+  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.7.Final"
 
   override def trigger = allRequirements
 
