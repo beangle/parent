@@ -33,15 +33,15 @@ object Dependencies extends sbt.AutoPlugin {
 
   val gson = "com.google.code.gson" % "gson" % "2.10.1"
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.0.9"
-  val spring_context = "org.springframework" % "spring-context" % "6.0.9"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.0.9"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.0.9"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.9"
+  val spring_beans = "org.springframework" % "spring-beans" % "6.0.10"
+  val spring_context = "org.springframework" % "spring-context" % "6.0.10"
+  val spring_tx = "org.springframework" % "spring-tx" % "6.0.10"
+  val spring_aop = "org.springframework" % "spring-aop" % "6.0.10"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.10"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.23.2"
 
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.5.Final"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.5.Final" exclude("org.hibernate.orm", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.6.Final"
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.6.Final" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.12.23"
   val javassist = "org.javassist" % "javassist" % "3.29.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
@@ -75,15 +75,15 @@ object Dependencies extends sbt.AutoPlugin {
   val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.0.1"
   val jakarta_mail = "com.sun.mail" % "jakarta.mail" % "2.0.1"
 
-  val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2022.14"
+  val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2023.9"
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.16" % "test"
   val mockito = "org.mockito" % "mockito-core" % "5.3.1" % "test"
   val greenmail = "com.icegreen" % "greenmail" % "2.0.0" % "test"
 
   //runtime
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.7"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.7"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.8"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.4.8"
   val postgresql = "org.postgresql" % "postgresql" % "42.6.0"
   val h2 = "com.h2database" % "h2" % "2.1.214"
   val HikariCP = "com.zaxxer" % "HikariCP" % "5.0.1"
