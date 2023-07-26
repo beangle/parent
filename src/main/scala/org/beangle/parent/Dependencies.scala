@@ -33,15 +33,15 @@ object Dependencies extends sbt.AutoPlugin {
 
   val gson = "com.google.code.gson" % "gson" % "2.10.1"
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.0.10"
-  val spring_context = "org.springframework" % "spring-context" % "6.0.10"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.0.10"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.0.10"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.10"
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.23.2"
+  val spring_beans = "org.springframework" % "spring-beans" % "6.0.11"
+  val spring_context = "org.springframework" % "spring-context" % "6.0.11"
+  val spring_tx = "org.springframework" % "spring-tx" % "6.0.11"
+  val spring_aop = "org.springframework" % "spring-aop" % "6.0.11"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.0.11"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.23.4"
 
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.6.Final"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.6.Final" exclude("org.hibernate.orm", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.2.7.Final"
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.2.7.Final" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.12.23"
   val javassist = "org.javassist" % "javassist" % "3.29.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
@@ -59,19 +59,19 @@ object Dependencies extends sbt.AutoPlugin {
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.10.8"
-  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.6"
-  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.1.6" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
+  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.7"
+  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.1.7" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
 
-  val jgroups = "org.jgroups" % "jgroups" % "5.2.14.Final"
-  val jedis = "redis.clients" % "jedis" % "4.4.1"
-  val lettuce = "io.lettuce" % "lettuce-core" % "6.2.4.RELEASE"
+  val jgroups = "org.jgroups" % "jgroups" % "5.2.16.Final"
+  val jedis = "redis.clients" % "jedis" % "4.4.3"
+  val lettuce = "io.lettuce" % "lettuce-core" % "6.2.5.RELEASE"
 
   // network
   val netty_common = "io.netty" % "netty-common" % "4.1.94.Final"
   val netty_handler = "io.netty" % "netty-handler" % "4.1.94.Final"
   val netty_transport = "io.netty" % "netty-transport" % "4.1.94.Final"
 
-  //mail
+  //mail,should update to org.eclipse.angus jakartamail
   val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.0.1"
   val jakarta_mail = "com.sun.mail" % "jakarta.mail" % "2.0.1"
 
