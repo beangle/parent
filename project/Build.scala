@@ -1,12 +1,14 @@
-import sbt.Keys._
-import sbt._
+import sbt.Keys.*
+import sbt.*
+
+import java.net.URI
 
 object BuildSettings {
 
   val commonSettings = Seq(
     organizationName := "The Beangle Software",
     startYear := Some(2005),
-    licenses += ("GNU General Public License version 3", new URL("http://www.gnu.org/licenses/lgpl-3.0.txt")),
+    licenses += ("GNU General Public License version 3", URI.create("http://www.gnu.org/licenses/lgpl-3.0.txt").toURL),
     crossPaths := false,
 
     publishMavenStyle := true,
