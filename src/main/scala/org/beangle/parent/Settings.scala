@@ -17,8 +17,10 @@
 
 package org.beangle.parent
 
-import sbt.Keys._
-import sbt._
+import sbt.*
+import sbt.Keys.*
+
+import java.net.URI
 
 object Settings extends sbt.AutoPlugin {
 
@@ -26,11 +28,11 @@ object Settings extends sbt.AutoPlugin {
 
   val common = Seq(
     organizationName := "The Beangle Software",
-    licenses += ("GNU Lesser General Public License version 3", new URL("http://www.gnu.org/licenses/lgpl-3.0.txt")),
+    licenses += ("GNU Lesser General Public License version 3", URI.create("http://www.gnu.org/licenses/lgpl-3.0.txt").toURL),
     startYear := Some(2005),
     scalaVersion := "3.3.1",
     scalacOptions := Seq("-Xtarget:17", "-deprecation", "-feature"),
-    javacOptions := Seq("--release","17","-encoding","utf-8"),
+    javacOptions := Seq("--release", "17", "-encoding", "utf-8"),
     crossPaths := true,
 
     publishMavenStyle := true,
