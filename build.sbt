@@ -1,7 +1,7 @@
 import BuildSettings._
 import sbt._
 
-ThisBuild / version := "0.11.0"
+ThisBuild / version := "0.11.1-SNAPSHOT"
 ThisBuild / description := "Beangle Parent."
 ThisBuild / organization := "org.beangle.parent"
 ThisBuild / homepage := Some(url("https://github.com/beangle/parent"))
