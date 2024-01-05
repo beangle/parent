@@ -17,14 +17,14 @@
 
 package org.beangle.parent
 
-import sbt._
+import sbt.*
 
 object Dependencies extends sbt.AutoPlugin {
 
   val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.2.0"
 
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.10"
-  val jcl_over_slf4j =  "org.slf4j" % "jcl-over-slf4j" % "2.0.10"
+  val jcl_over_slf4j = "org.slf4j" % "jcl-over-slf4j" % "2.0.10"
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.25.0"
 
   //web
@@ -77,6 +77,10 @@ object Dependencies extends sbt.AutoPlugin {
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.17" % "test"
   val mockito = "org.mockito" % "mockito-core" % "5.8.0" % "test"
   val greenmail = "com.icegreen" % "greenmail" % "2.1.0-alpha-3" % "test"
+
+  //script
+  val aviator = "com.googlecode.aviator" % "aviator" % "5.4.1"
+  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.3"
 
   //runtime
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.14"
