@@ -80,7 +80,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   //script
   val aviator = "com.googlecode.aviator" % "aviator" % "5.4.1"
-  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.3"
+  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.3" exclude("commons-logging", "commons-logging")
 
   //runtime
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.4.14"
