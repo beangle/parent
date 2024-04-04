@@ -31,9 +31,9 @@ object Settings extends sbt.AutoPlugin {
     licenses += ("GNU Lesser General Public License version 3", URI.create("http://www.gnu.org/licenses/lgpl-3.0.txt").toURL),
     startYear := Some(2005),
     scalaVersion := "3.3.3",
-    scalacOptions := Seq("-Xtarget:17", "-deprecation", "-feature"),
-    javacOptions := Seq("--release", "17", "-encoding", "utf-8"),
-    crossPaths := true,
+    scalacOptions := Seq("-Xtarget:21", "-deprecation", "-feature"),
+    javacOptions := Seq("--release", "21", "-encoding", "utf-8"),
+    crossPaths := false,
 
     publishMavenStyle := true,
     publishConfiguration := publishConfiguration.value.withOverwrite(true),

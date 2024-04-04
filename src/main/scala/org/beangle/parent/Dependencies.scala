@@ -25,7 +25,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.12"
   val jcl_over_slf4j = "org.slf4j" % "jcl-over-slf4j" % "2.0.12"
-  val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.26.0"
+  val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.26.1"
 
   //web
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "6.0.0"
