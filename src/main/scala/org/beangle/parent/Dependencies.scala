@@ -33,11 +33,11 @@ object Dependencies extends sbt.AutoPlugin {
 
   val gson = "com.google.code.gson" % "gson" % "2.10.1"
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.1.4"
-  val spring_context = "org.springframework" % "spring-context" % "6.1.4"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.1.4"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.1.4"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.1.4"
+  val spring_beans = "org.springframework" % "spring-beans" % "6.1.5"
+  val spring_context = "org.springframework" % "spring-context" % "6.1.5"
+  val spring_tx = "org.springframework" % "spring-tx" % "6.1.5"
+  val spring_aop = "org.springframework" % "spring-aop" % "6.1.5"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.1.5"
   val protobuf = "com.google.protobuf" % "protobuf-java" % "3.25.1"
 
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.4.4.Final"
@@ -60,7 +60,7 @@ object Dependencies extends sbt.AutoPlugin {
   val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.1.8" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
 
   val jgroups = "org.jgroups" % "jgroups" % "5.3.3.Final"
-  val jedis = "redis.clients" % "jedis" % "5.1.0"
+  val jedis = "redis.clients" % "jedis" % "5.1.2"
   val lettuce = "io.lettuce" % "lettuce-core" % "6.3.1.RELEASE"
 
   // network
@@ -69,8 +69,8 @@ object Dependencies extends sbt.AutoPlugin {
   val netty_transport = "io.netty" % "netty-transport" % "4.1.107.Final"
 
   //mail
-  val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.1.2"
-  val jakarta_mail_angus = "org.eclipse.angus" % "angus-mail" % "2.0.2"
+  val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.1.3"
+  val jakarta_mail_angus = "org.eclipse.angus" % "angus-mail" % "2.0.3"
 
   val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2024.3"
   //test
@@ -83,9 +83,9 @@ object Dependencies extends sbt.AutoPlugin {
   val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.3" exclude("commons-logging", "commons-logging")
 
   //runtime
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.0"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.0"
-  val postgresql = "org.postgresql" % "postgresql" % "42.7.2"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.3"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.3"
+  val postgresql = "org.postgresql" % "postgresql" % "42.7.3"
   val h2 = "com.h2database" % "h2" % "2.2.224"
   val HikariCP = "com.zaxxer" % "HikariCP" % "5.1.0"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
