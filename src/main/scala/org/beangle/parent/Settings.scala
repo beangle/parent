@@ -20,19 +20,17 @@ package org.beangle.parent
 import sbt.*
 import sbt.Keys.*
 
-import java.net.URI
-
 object Settings extends sbt.AutoPlugin {
 
   override def trigger = allRequirements
 
   val common = Seq(
     organizationName := "The Beangle Software",
-    licenses += ("GNU Lesser General Public License version 3", URI.create("http://www.gnu.org/licenses/lgpl-3.0.txt").toURL),
+    licenses += ("GNU Lesser General Public License version 3", url("http://www.gnu.org/licenses/lgpl-3.0.txt")),
     startYear := Some(2005),
     scalaVersion := "3.3.3",
     scalacOptions := Seq("-Xtarget:21", "-deprecation", "-feature"),
-    javacOptions := Seq("--release", "21", "-encoding", "utf-8"),
+    javacOptions := Seq("--source", "21", "--target", "21", "-encoding", "utf-8"),
     crossPaths := false,
 
     publishMavenStyle := true,
