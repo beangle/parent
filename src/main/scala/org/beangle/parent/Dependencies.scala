@@ -29,7 +29,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   //web
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "6.0.0"
-  var freemarker = "org.freemarker" % "freemarker" % "2.3.32"
+  var freemarker = "org.freemarker" % "freemarker" % "2.3.33"
 
   val gson = "com.google.code.gson" % "gson" % "2.10.1"
   //cdi
