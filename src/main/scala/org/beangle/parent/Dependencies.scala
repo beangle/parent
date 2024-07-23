@@ -92,7 +92,7 @@ object Dependencies extends sbt.AutoPlugin {
   val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.4.0.24.05"
   val orai18n = "com.oracle.database.nls" % "orai18n" % "23.4.0.24.05"
   val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.0.0"
-  val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "12.7.0"
+  val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "12.6.3.jre11"
 
   val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "10.1.26"
   val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.15.Final"
