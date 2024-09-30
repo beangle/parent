@@ -28,7 +28,7 @@ object Settings extends sbt.AutoPlugin {
     organizationName := "The Beangle Software",
     licenses += ("GNU Lesser General Public License version 3", url("http://www.gnu.org/licenses/lgpl-3.0.txt")),
     startYear := Some(2005),
-    scalaVersion := "3.3.3",
+    scalaVersion := "3.3.4",
     scalacOptions := Seq("-Xtarget:21", "-deprecation", "-feature"),
     javacOptions := Seq("--source", "21", "--target", "21", "-encoding", "utf-8"),
     crossPaths := false,

@@ -37,7 +37,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   //serialization
   val gson = "com.google.code.gson" % "gson" % "2.11.0"
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "3.25.5"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.28.2"
 
   //cdi
   val spring_beans = "org.springframework" % "spring-beans" % "6.1.13"
@@ -47,9 +47,9 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.1.13"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.4.9.Final"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.4.9.Final" exclude("org.hibernate.orm", "hibernate-core")
-  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.14.13"
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.6.1.Final"
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.6.1.Final" exclude("org.hibernate.orm", "hibernate-core")
+  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.14.18"
   val javassist = "org.javassist" % "javassist" % "3.30.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
 
@@ -66,7 +66,7 @@ object Dependencies extends sbt.AutoPlugin {
   val ehcache = "org.ehcache" % "ehcache" % "3.10.8"
   val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.8"
   val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.1.8" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
-  val jedis = "redis.clients" % "jedis" % "5.1.5"
+  val jedis = "redis.clients" % "jedis" % "5.2.0"
   val lettuce = "io.lettuce" % "lettuce-core" % "6.4.0.RELEASE"
   val jgroups = "org.jgroups" % "jgroups" % "5.3.11.Final"
 
