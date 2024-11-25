@@ -33,6 +33,8 @@ object Dependencies extends sbt.AutoPlugin {
 
   //web
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "6.1.0"
+  val websocketapi = "jakarta.websocket" % "jakarta.websocket-api" % "2.2.0"
+  val websocket_client_api = "jakarta.websocket" % "jakarta.websocket-client-api" % "2.2.0"
   var freemarker = "org.freemarker" % "freemarker" % "2.3.33"
 
   //serialization
