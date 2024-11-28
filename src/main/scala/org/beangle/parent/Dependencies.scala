@@ -94,7 +94,7 @@ object Dependencies extends sbt.AutoPlugin {
   //runtime
   val postgresql = "org.postgresql" % "postgresql" % "42.7.4"
   val h2 = "com.h2database" % "h2" % "2.3.232"
-  val HikariCP = "com.zaxxer" % "HikariCP" % "6.2.0"
+  val HikariCP = "com.zaxxer" % "HikariCP" % "6.2.1"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
   val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.6.0.24.10"
   val orai18n = "com.oracle.database.nls" % "orai18n" % "23.6.0.24.10"
