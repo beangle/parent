@@ -45,6 +45,7 @@ object Settings extends sbt.AutoPlugin {
     sonatypeProfileName    := "org.beangle",
     publishTo := sonatypePublishToBundle.value,
     sonatypeCredentialHost := sonatypeCentralHost,
-    resolvers += Resolver.mavenLocal
+    resolvers += Resolver.mavenLocal,
+    addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.12.2")
   )
 }
