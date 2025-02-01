@@ -41,11 +41,11 @@ object Dependencies extends sbt.AutoPlugin {
   val protobuf = "com.google.protobuf" % "protobuf-java" % "4.29.3"
 
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.2.1"
-  val spring_context = "org.springframework" % "spring-context" % "6.2.1"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.2.1"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.2.1"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.2.1"
+  val spring_beans = "org.springframework" % "spring-beans" % "6.2.2"
+  val spring_context = "org.springframework" % "spring-context" % "6.2.2"
+  val spring_tx = "org.springframework" % "spring-tx" % "6.2.2"
+  val spring_aop = "org.springframework" % "spring-aop" % "6.2.2"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.2.2"
 
   //jpa
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.6.4.Final"
@@ -61,14 +61,14 @@ object Dependencies extends sbt.AutoPlugin {
   val poi = "org.apache.poi" % "poi" % "5.4.0"
   val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.4.0"
   val itext_kernel = "com.itextpdf" % "kernel" % "9.0.0"
-  val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.3"
+  val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.4"
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.10.8"
-  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.1.8"
-  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.1.8" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
+  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.0"
+  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.0" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
   val jedis = "redis.clients" % "jedis" % "5.2.0"
-  val lettuce = "io.lettuce" % "lettuce-core" % "6.5.2.RELEASE"
+  val lettuce = "io.lettuce" % "lettuce-core" % "6.5.3.RELEASE"
   val jgroups = "org.jgroups" % "jgroups" % "5.4.1.Final"
 
   // network
@@ -97,7 +97,7 @@ object Dependencies extends sbt.AutoPlugin {
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
   val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.6.0.24.10"
   val orai18n = "com.oracle.database.nls" % "orai18n" % "23.6.0.24.10"
-  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.1.0"
+  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.2.0"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "12.8.1.jre11"
 
   val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.2"
