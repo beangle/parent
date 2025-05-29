@@ -21,7 +21,7 @@ import sbt.*
 
 object Dependencies extends sbt.AutoPlugin {
 
-  val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.3.0"
+  val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.4.0"
 
   //log
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.17"
@@ -38,7 +38,7 @@ object Dependencies extends sbt.AutoPlugin {
   var freemarker = "org.freemarker" % "freemarker" % "2.3.34"
 
   //serialization
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.31.0"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.31.1"
 
   //cdi
   val spring_beans = "org.springframework" % "spring-beans" % "6.2.7"
@@ -49,7 +49,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   //jpa
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.6.15.Final"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.6.15.Final" exclude("org.hibernate.orm", "hibernate-core")
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.6.17.Final" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.15.11"
   val javassist = "org.javassist" % "javassist" % "3.30.2-GA"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.1.0"
@@ -83,7 +83,7 @@ object Dependencies extends sbt.AutoPlugin {
   val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2025.2"
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.19" % "test"
-  val mockito = "org.mockito" % "mockito-core" % "5.17.0" % "test"
+  val mockito = "org.mockito" % "mockito-core" % "5.18.0" % "test"
   val greenmail = "com.icegreen" % "greenmail" % "2.1.3" % "test"
 
   //script
@@ -91,7 +91,7 @@ object Dependencies extends sbt.AutoPlugin {
   val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.5.0" exclude("commons-logging", "commons-logging")
 
   //runtime
-  val postgresql = "org.postgresql" % "postgresql" % "42.7.5"
+  val postgresql = "org.postgresql" % "postgresql" % "42.7.6"
   val h2 = "com.h2database" % "h2" % "2.3.232"
   val HikariCP = "com.zaxxer" % "HikariCP" % "6.3.0"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"

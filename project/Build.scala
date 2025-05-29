@@ -1,7 +1,5 @@
 import sbt.*
 import sbt.Keys.*
-import xerial.sbt.Sonatype.autoImport.*
-import xerial.sbt.Sonatype.sonatypeCentralHost
 
 object BuildSettings {
 
@@ -18,10 +16,8 @@ object BuildSettings {
 
     versionScheme := Some("early-semver"),
     pomIncludeRepository := { _ => false }, // Remove all additional repository other than Maven Central from POM
-    sonatypeProfileName    := "org.beangle",
-    sonatypeCredentialHost := sonatypeCentralHost,
     sbtPluginPublishLegacyMavenStyle := false,
-    publishTo := sonatypePublishToBundle.value,
-    addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.12.2")
+    publishTo := localStaging.value,
+    credentials += Credentials(Path.userHome / ".sbt" / "sonatype_central_credentials")
   )
 }

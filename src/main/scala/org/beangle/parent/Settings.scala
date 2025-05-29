@@ -19,8 +19,6 @@ package org.beangle.parent
 
 import sbt.*
 import sbt.Keys.*
-import xerial.sbt.Sonatype.autoImport.*
-import xerial.sbt.Sonatype.sonatypeCentralHost
 
 object Settings extends sbt.AutoPlugin {
 
@@ -42,9 +40,8 @@ object Settings extends sbt.AutoPlugin {
 
     versionScheme := Some("early-semver"),
     pomIncludeRepository := { _ => false }, // Remove all additional repository other than Maven Central from POM
-    sonatypeProfileName    := "org.beangle",
-    publishTo := sonatypePublishToBundle.value,
-    sonatypeCredentialHost := sonatypeCentralHost,
+    credentials += Credentials(Path.userHome / ".sbt" / "sonatype_central_credentials"),
+    publishTo := localStaging.value,
     resolvers += Resolver.mavenLocal
   )
 }
