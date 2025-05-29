@@ -48,7 +48,7 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.2.7"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.6.15.Final"
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "6.6.17.Final"
   val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "6.6.17.Final" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.15.11"
   val javassist = "org.javassist" % "javassist" % "3.30.2-GA"
