@@ -19,6 +19,7 @@ package org.beangle.parent
 
 import sbt.*
 import sbt.Keys.*
+import sbtversionpolicy.SbtVersionPolicyPlugin.autoImport.{Compatibility, versionPolicyIntention}
 
 object Settings extends sbt.AutoPlugin {
 
@@ -42,6 +43,7 @@ object Settings extends sbt.AutoPlugin {
     pomIncludeRepository := { _ => false }, // Remove all additional repository other than Maven Central from POM
     credentials += Credentials(Path.userHome / ".sbt" / "sonatype_central_credentials"),
     publishTo := localStaging.value,
-    resolvers += Resolver.mavenLocal
+    resolvers += Resolver.mavenLocal,
+    versionPolicyIntention := Compatibility.BinaryAndSourceCompatible
   )
 }
