@@ -50,8 +50,7 @@ object Dependencies extends sbt.AutoPlugin {
   //jpa
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.2.0.CR1"
   val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "7.2.0.CR1" exclude("org.hibernate.orm", "hibernate-core")
-  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.17.6"
-  val javassist = "org.javassist" % "javassist" % "3.30.2-GA"
+  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.17.8"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
 
   //jna
