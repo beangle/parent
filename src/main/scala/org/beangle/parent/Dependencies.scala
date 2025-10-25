@@ -26,8 +26,8 @@ object Dependencies extends sbt.AutoPlugin {
   //log
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.17"
   val jcl_over_slf4j = "org.slf4j" % "jcl-over-slf4j" % "2.0.17"
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.19"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.19"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.20"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.20"
 
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.28.0"
 
@@ -67,7 +67,7 @@ object Dependencies extends sbt.AutoPlugin {
   val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.2"
   val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.2" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
   val jedis = "redis.clients" % "jedis" % "7.0.0"
-  val lettuce = "io.lettuce" % "lettuce-core" % "7.0.0.BETA2"
+  val lettuce = "io.lettuce" % "lettuce-core" % "7.0.0.RELEASE"
   val jgroups = "org.jgroups" % "jgroups" % "5.5.0.Final"
 
   // network
