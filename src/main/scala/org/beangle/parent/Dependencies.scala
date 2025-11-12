@@ -26,9 +26,13 @@ object Dependencies extends sbt.AutoPlugin {
   //log
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.17"
   val jcl_over_slf4j = "org.slf4j" % "jcl-over-slf4j" % "2.0.17"
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.20"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.20"
+  val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.17"
+  val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.25.2"
 
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.21"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.21"
+
+  // file
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.28.0"
 
   //web
@@ -57,18 +61,18 @@ object Dependencies extends sbt.AutoPlugin {
   val jna = "net.java.dev.jna" % "jna" % "5.18.1"
 
   //doc
-  val poi = "org.apache.poi" % "poi" % "5.4.1"
-  val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.4.1"
+  val poi = "org.apache.poi" % "poi" % "5.4.1" exclude("org.apache.logging.log4j", "*")
+  val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.4.1" exclude("org.apache.logging.log4j", "*")
   val itext_kernel = "com.itextpdf" % "kernel" % "9.3.0"
   val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.6"
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.11.1"
-  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.2"
-  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.2" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
+  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.3"
+  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.3" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
   val jedis = "redis.clients" % "jedis" % "7.0.0"
   val lettuce = "io.lettuce" % "lettuce-core" % "7.0.0.RELEASE"
-  val jgroups = "org.jgroups" % "jgroups" % "5.5.0.Final"
+  val jgroups = "org.jgroups" % "jgroups" % "5.5.1.Final"
 
   // network
   val netty_common = "io.netty" % "netty-common" % "4.2.7.Final"
@@ -94,12 +98,12 @@ object Dependencies extends sbt.AutoPlugin {
   val h2 = "com.h2database" % "h2" % "2.4.240"
   val HikariCP = "com.zaxxer" % "HikariCP" % "7.0.2"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
-  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.9.0.25.07"
-  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.9.0.25.07"
-  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.4.0"
+  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.0.0.0"
+  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.0.0.0"
+  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.5.0"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.2.1.jre11"
 
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.13"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.14"
   val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.20.Final"
   val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.20.Final"
 
