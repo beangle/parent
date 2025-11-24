@@ -25,7 +25,6 @@ object Dependencies extends sbt.AutoPlugin {
 
   //log
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.17"
-  val jcl_over_slf4j = "org.slf4j" % "jcl-over-slf4j" % "2.0.17"
   val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.17"
   val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.25.2"
 
@@ -42,18 +41,18 @@ object Dependencies extends sbt.AutoPlugin {
   var freemarker = "org.freemarker" % "freemarker" % "2.3.34"
 
   //serialization
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.33.0"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.33.1"
 
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "6.2.12"
-  val spring_context = "org.springframework" % "spring-context" % "6.2.12"
-  val spring_tx = "org.springframework" % "spring-tx" % "6.2.12"
-  val spring_aop = "org.springframework" % "spring-aop" % "6.2.12"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "6.2.12"
+  val spring_beans = "org.springframework" % "spring-beans" % "7.0.0"
+  val spring_context = "org.springframework" % "spring-context" % "7.0.0"
+  val spring_tx = "org.springframework" % "spring-tx" % "7.0.0"
+  val spring_aop = "org.springframework" % "spring-aop" % "7.0.0"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "7.0.0"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.2.0.CR1"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "7.2.0.CR1" exclude("org.hibernate.orm", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.2.0.CR2"
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "7.2.0.CR2" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.17.8"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
 
@@ -61,9 +60,9 @@ object Dependencies extends sbt.AutoPlugin {
   val jna = "net.java.dev.jna" % "jna" % "5.18.1"
 
   //doc
-  val poi = "org.apache.poi" % "poi" % "5.4.1" exclude("org.apache.logging.log4j", "*")
-  val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.4.1" exclude("org.apache.logging.log4j", "*")
-  val itext_kernel = "com.itextpdf" % "kernel" % "9.3.0"
+  val poi = "org.apache.poi" % "poi" % "5.5.0" exclude("org.apache.logging.log4j", "*")
+  val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.5.0" exclude("org.apache.logging.log4j", "*")
+  val itext_kernel = "com.itextpdf" % "kernel" % "9.4.0"
   val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.6"
 
   //cache
@@ -91,10 +90,10 @@ object Dependencies extends sbt.AutoPlugin {
 
   //script
   val aviator = "com.googlecode.aviator" % "aviator" % "5.4.3"
-  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.5.0" exclude("commons-logging", "commons-logging")
+  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.6.0"
 
   //runtime
-  val postgresql = "org.postgresql" % "postgresql" % "42.7.8"
+  val postgresql = "org.postgresql" % "postgresql" % "42.7.8" exclude("org.checkerframework", "checker-qual")
   val h2 = "com.h2database" % "h2" % "2.4.240"
   val HikariCP = "com.zaxxer" % "HikariCP" % "7.0.2"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
