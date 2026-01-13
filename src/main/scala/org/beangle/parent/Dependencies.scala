@@ -28,8 +28,8 @@ object Dependencies extends sbt.AutoPlugin {
   val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.17"
   val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.25.3"
 
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.23"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.23"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.24"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.24"
 
   //config
   val snakeyaml = "org.yaml" % "snakeyaml" % "2.5"
@@ -45,7 +45,7 @@ object Dependencies extends sbt.AutoPlugin {
   var freemarker = "org.freemarker" % "freemarker" % "2.3.34"
 
   //serialization
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.33.2"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.33.3"
 
   //cdi
   val spring_beans = "org.springframework" % "spring-beans" % "7.0.2"
@@ -67,13 +67,18 @@ object Dependencies extends sbt.AutoPlugin {
   val poi = "org.apache.poi" % "poi" % "5.5.1" exclude("org.apache.logging.log4j", "*")
   val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.5.1" exclude("org.apache.logging.log4j", "*")
   val itext_kernel = "com.itextpdf" % "kernel" % "9.4.0"
+  val itext_layout = "com.itextpdf" % "layout" % "9.4.0"
+  val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.4.0"
+
   val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.6"
+  val jodconverter_local = "org.jodconverter" % "jodconverter-local" % "4.4.11" % "optional" exclude("org.openoffice", "*")
+  val libreoffice = "org.libreoffice" % "libreoffice" % "24.8.4" % "optional"
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.11.1"
   val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.3"
   val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.3" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
-  val jedis = "redis.clients" % "jedis" % "7.2.0"
+  val jedis = "redis.clients" % "jedis" % "7.2.0" exclude("com.google.code.gson", "gson") exclude("org.json", "json") exclude("org.slf4j", "*")
   val lettuce = "io.lettuce" % "lettuce-core" % "7.1.0.RELEASE"
   val jgroups = "org.jgroups" % "jgroups" % "5.5.2.Final"
 
@@ -106,9 +111,12 @@ object Dependencies extends sbt.AutoPlugin {
   val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.5.0"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.2.1.jre11"
 
+  //web container
   val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.15"
   val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.20.Final"
   val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.20.Final"
+
+  val java_websocket = "org.java-websocket" % "Java-WebSocket" % "1.6.0"
 
   override def trigger = allRequirements
 
