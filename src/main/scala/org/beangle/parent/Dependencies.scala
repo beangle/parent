@@ -43,9 +43,10 @@ object Dependencies extends sbt.AutoPlugin {
   val websocketapi = "jakarta.websocket" % "jakarta.websocket-api" % "2.2.0"
   val websocket_client_api = "jakarta.websocket" % "jakarta.websocket-client-api" % "2.2.0"
   var freemarker = "org.freemarker" % "freemarker" % "2.3.34"
+  val java_websocket = "org.java-websocket" % "Java-WebSocket" % "1.6.0"
 
   //serialization
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.33.3"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.33.4"
 
   //cdi
   val spring_beans = "org.springframework" % "spring-beans" % "7.0.2"
@@ -71,8 +72,8 @@ object Dependencies extends sbt.AutoPlugin {
   val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.4.0"
 
   val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.6"
-  val jodconverter_local = "org.jodconverter" % "jodconverter-local" % "4.4.11" % "optional" exclude("org.openoffice", "*")
-  val libreoffice = "org.libreoffice" % "libreoffice" % "24.8.4" % "optional"
+  val jodconverter_local = "org.jodconverter" % "jodconverter-local" % "4.4.11" exclude("org.openoffice", "*")
+  val libreoffice = "org.libreoffice" % "libreoffice" % "24.8.4"
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.11.1"
@@ -115,8 +116,6 @@ object Dependencies extends sbt.AutoPlugin {
   val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.15"
   val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.20.Final"
   val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.20.Final"
-
-  val java_websocket = "org.java-websocket" % "Java-WebSocket" % "1.6.0"
 
   override def trigger = allRequirements
 
