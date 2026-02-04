@@ -21,15 +21,13 @@ import sbt.*
 
 object Dependencies extends sbt.AutoPlugin {
 
-  val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "2.4.0"
-
   //log
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.17"
   val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.17"
   val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.25.3"
 
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.24"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.24"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.27"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.27"
 
   //config
   val snakeyaml = "org.yaml" % "snakeyaml" % "2.5"
@@ -46,14 +44,14 @@ object Dependencies extends sbt.AutoPlugin {
   val java_websocket = "org.java-websocket" % "Java-WebSocket" % "1.6.0"
 
   //serialization
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.33.4"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.33.5"
 
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "7.0.2"
-  val spring_context = "org.springframework" % "spring-context" % "7.0.2"
-  val spring_tx = "org.springframework" % "spring-tx" % "7.0.2"
-  val spring_aop = "org.springframework" % "spring-aop" % "7.0.2"
-  val spring_jdbc = "org.springframework" % "spring-jdbc" % "7.0.2"
+  val spring_beans = "org.springframework" % "spring-beans" % "7.0.3"
+  val spring_context = "org.springframework" % "spring-context" % "7.0.3"
+  val spring_tx = "org.springframework" % "spring-tx" % "7.0.3"
+  val spring_aop = "org.springframework" % "spring-aop" % "7.0.3"
+  val spring_jdbc = "org.springframework" % "spring-jdbc" % "7.0.3"
 
   //jpa
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.2.0.Final"
@@ -67,9 +65,9 @@ object Dependencies extends sbt.AutoPlugin {
   //doc
   val poi = "org.apache.poi" % "poi" % "5.5.1" exclude("org.apache.logging.log4j", "*")
   val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.5.1" exclude("org.apache.logging.log4j", "*")
-  val itext_kernel = "com.itextpdf" % "kernel" % "9.4.0"
-  val itext_layout = "com.itextpdf" % "layout" % "9.4.0"
-  val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.4.0"
+  val itext_kernel = "com.itextpdf" % "kernel" % "9.5.0"
+  val itext_layout = "com.itextpdf" % "layout" % "9.5.0"
+  val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.5.0"
 
   val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.6"
   val jodconverter_local = "org.jodconverter" % "jodconverter-local" % "4.4.11" exclude("org.openoffice", "*")
@@ -79,7 +77,7 @@ object Dependencies extends sbt.AutoPlugin {
   val ehcache = "org.ehcache" % "ehcache" % "3.11.1"
   val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.3"
   val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.3" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
-  val jedis = "redis.clients" % "jedis" % "7.2.0" exclude("com.google.code.gson", "gson") exclude("org.json", "json") exclude("org.slf4j", "*")
+  val jedis = "redis.clients" % "jedis" % "7.2.1" exclude("com.google.code.gson", "gson") exclude("org.json", "json") exclude("org.slf4j", "*")
   val lettuce = "io.lettuce" % "lettuce-core" % "7.1.0.RELEASE"
   val jgroups = "org.jgroups" % "jgroups" % "5.5.2.Final"
 
