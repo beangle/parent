@@ -101,19 +101,19 @@ object Dependencies extends sbt.AutoPlugin {
   val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.6.1"
 
   //db drivers
-  val postgresql = "org.postgresql" % "postgresql" % "42.7.8" exclude("org.checkerframework", "checker-qual")
+  val postgresql = "org.postgresql" % "postgresql" % "42.7.9" exclude("org.checkerframework", "checker-qual")
   val h2 = "com.h2database" % "h2" % "2.4.240"
   val HikariCP = "com.zaxxer" % "HikariCP" % "7.0.2"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
-  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.0.0.0"
-  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.0.0.0"
-  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.5.0"
+  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.1.0.0"
+  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.1.0.0"
+  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.6.0"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.2.1.jre11"
 
   //web container
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.15"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.20.Final"
-  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.20.Final"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.18"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.23.Final"
+  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.23.Final"
 
   override def trigger = allRequirements
 
