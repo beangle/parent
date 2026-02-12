@@ -25,9 +25,8 @@ object Dependencies extends sbt.AutoPlugin {
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.17"
   val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.17"
   val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.25.3"
-
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.27"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.27"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.29"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.29"
 
   //config
   val snakeyaml = "org.yaml" % "snakeyaml" % "2.5"
@@ -54,7 +53,7 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_jdbc = "org.springframework" % "spring-jdbc" % "7.0.3"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.2.0.Final"
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.2.3.Final"
   val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "7.2.3.Final" exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.17.8"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
@@ -98,10 +97,10 @@ object Dependencies extends sbt.AutoPlugin {
 
   //script
   val aviator = "com.googlecode.aviator" % "aviator" % "5.4.3"
-  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.6.1"
+  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.6.2"
 
   //db drivers
-  val postgresql = "org.postgresql" % "postgresql" % "42.7.9" exclude("org.checkerframework", "checker-qual")
+  val postgresql = "org.postgresql" % "postgresql" % "42.7.10" exclude("org.checkerframework", "checker-qual")
   val h2 = "com.h2database" % "h2" % "2.4.240"
   val HikariCP = "com.zaxxer" % "HikariCP" % "7.0.2"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
