@@ -22,15 +22,15 @@ import sbt.*
 object Dependencies extends sbt.AutoPlugin {
 
   //log
-  val slf4j = "org.slf4j" % "slf4j-api" % "2.0.17"
-  val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.17"
-  val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.25.3"
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.32"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.32"
+  val slf4j = "org.slf4j" % "slf4j-api" % "2.0.18"
+  val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.18"
+  val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.26.0"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.34"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.34"
 
   //config
   val snakeyaml = "org.yaml" % "snakeyaml" % "2.6"
-  val typesafe_config = "com.typesafe" % "config" % "1.4.6"
+  val typesafe_config = "com.typesafe" % "config" % "1.4.9"
 
   // file
   val apache_commons_compress = "org.apache.commons" % "commons-compress" % "1.28.0"
@@ -43,40 +43,40 @@ object Dependencies extends sbt.AutoPlugin {
   val java_websocket = "org.java-websocket" % "Java-WebSocket" % "1.6.0"
 
   //serialization
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.34.0"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.35.1"
 
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "7.0.5"
-  val spring_tx = "org.springframework" % "spring-tx" % "7.0.5"
-  val spring_aop = "org.springframework" % "spring-aop" % "7.0.5"
+  val spring_beans = "org.springframework" % "spring-beans" % "7.0.8"
+  val spring_tx = "org.springframework" % "spring-tx" % "7.0.8"
+  val spring_aop = "org.springframework" % "spring-aop" % "7.0.8"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.2.6.Final"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "7.2.6.Final" exclude("org.hibernate.orm", "hibernate-core")
-  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.17.8"
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.1.Final"
+  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "7.4.1.Final" exclude("org.hibernate.orm", "hibernate-core")
+  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.8"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
 
   //jna
-  val jna = "net.java.dev.jna" % "jna" % "5.18.1"
+  val jna = "net.java.dev.jna" % "jna" % "5.19.1"
 
   //doc
   val poi = "org.apache.poi" % "poi" % "5.5.1" exclude("org.apache.logging.log4j", "*")
   val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.5.1" exclude("org.apache.logging.log4j", "*")
-  val itext_kernel = "com.itextpdf" % "kernel" % "9.5.0"
-  val itext_layout = "com.itextpdf" % "layout" % "9.5.0"
-  val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.5.0"
+  val itext_kernel = "com.itextpdf" % "kernel" % "9.6.0"
+  val itext_layout = "com.itextpdf" % "layout" % "9.6.0"
+  val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.6.0"
 
   val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.7"
   val jodconverter_local = "org.jodconverter" % "jodconverter-local" % "4.4.11" exclude("org.openoffice", "*")
-  val libreoffice = "org.libreoffice" % "libreoffice" % "24.8.4"
+  val libreoffice = "org.libreoffice" % "libreoffice" % "26.2.2"
 
   //cache
-  val ehcache = "org.ehcache" % "ehcache" % "3.11.1"
-  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.3"
-  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.3" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
-  val jedis = "redis.clients" % "jedis" % "7.3.0" exclude("com.google.code.gson", "gson") exclude("org.json", "json") exclude("org.slf4j", "*")
-  val lettuce = "io.lettuce" % "lettuce-core" % "7.5.0.RELEASE"
-  val jgroups = "org.jgroups" % "jgroups" % "5.5.3.Final"
+  val ehcache = "org.ehcache" % "ehcache" % "3.12.0"
+  val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.4"
+  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.4" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
+  val jedis = "redis.clients" % "jedis" % "7.5.2" exclude("com.google.code.gson", "gson") exclude("org.json", "json") exclude("org.slf4j", "*")
+  val lettuce = "io.lettuce" % "lettuce-core" % "7.6.0.RELEASE"
+  val jgroups = "org.jgroups" % "jgroups" % "5.5.5.Final"
 
   // network
   val netty_common = "io.netty" % "netty-common" % "4.2.9.Final"
@@ -89,8 +89,8 @@ object Dependencies extends sbt.AutoPlugin {
 
   val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2025.10"
   //test
-  val scalatest = "org.scalatest" %% "scalatest" % "3.2.19" % "test"
-  val mockito = "org.mockito" % "mockito-core" % "5.22.0" % "test"
+  val scalatest = "org.scalatest" %% "scalatest" % "3.2.20" % "test"
+  val mockito = "org.mockito" % "mockito-core" % "5.23.0" % "test"
   val greenmail = "com.icegreen" % "greenmail" % "2.1.8" % "test"
 
   //script
@@ -98,19 +98,19 @@ object Dependencies extends sbt.AutoPlugin {
   val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.6.2"
 
   //db drivers
-  val postgresql = "org.postgresql" % "postgresql" % "42.7.10" exclude("org.checkerframework", "checker-qual")
+  val postgresql = "org.postgresql" % "postgresql" % "42.7.11" exclude("org.checkerframework", "checker-qual")
   val h2 = "com.h2database" % "h2" % "2.4.240"
   val HikariCP = "com.zaxxer" % "HikariCP" % "7.0.2"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
-  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.1.0.0"
-  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.1.0.0"
-  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.6.0"
+  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.2.0.0"
+  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.2.0.0"
+  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.7.0"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.2.1.jre11"
 
   //web container
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.18"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.23.Final"
-  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.23.Final"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.22"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.24.Final"
+  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.24.Final"
 
   override def trigger = allRequirements
 
