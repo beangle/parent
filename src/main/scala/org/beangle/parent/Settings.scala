@@ -25,7 +25,31 @@ object Settings extends sbt.AutoPlugin {
 
   override def trigger = allRequirements
 
-  val common = Seq(
+  /** 仅打包 README 占位文件，满足 Maven Central 对 -javadoc.jar 的要求，避免生成完整 Scaladoc。 */
+  val stubJavadoc: Seq[Def.Setting[_]] = Seq(
+    Compile / doc / sources := Nil,
+    Compile / packageDoc := {
+      val out = (Compile / packageDoc / artifactPath).value
+      val dir = (Compile / target).value / "stub-javadoc"
+      IO.createDirectory(dir)
+      val docUrl = homepage.value.map(_.toString).getOrElse("https://beangle.github.io/")
+      IO.write(
+        dir / "README.md",
+        s"""# No bundled API documentation
+           |
+           |Documentation: $docUrl
+           |Source code: `-sources.jar`
+           |""".stripMargin
+      )
+      val manifest = new java.util.jar.Manifest()
+      manifest.getMainAttributes.put(java.util.jar.Attributes.Name.MANIFEST_VERSION, "1.0")
+      val mappings = (dir ** "*").get pair Path.rebase(dir, "")
+      IO.jar(mappings, out, manifest, Some(0L))
+      out
+    }
+  )
+
+  val common = stubJavadoc ++ Seq(
     organizationName := "The Beangle Software",
     licenses += ("GNU Lesser General Public License version 3", url("http://www.gnu.org/licenses/lgpl-3.0.txt")),
     startYear := Some(2005),

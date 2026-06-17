@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.15.14-SNAPSHOT (2026-06-15)
+
+| Area | Change |
+|------|--------|
+| build | Add `stubJavadoc` settings to ship a README placeholder `-javadoc.jar` instead of Scaladoc |
+
 ## 0.15.13 (2026-06-15)
 
 | Dependency | From | To |
