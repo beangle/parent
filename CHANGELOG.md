@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.15.15-SNAPSHOT (2026-07-14)
+
+| Area | Change |
+|------|--------|
+| build | Require sbt 2.0.2+; publish artifact suffix is now `_sbt2_3` |
+| build | Upgrade sbt-pgp to 2.3.1, sbt-version-policy to 3.3.0 |
+| build | Adapt Settings/Dependencies for sbt 2 API (License, Def.uncached, exclude dot syntax) |
+| scala | Default `scalaVersion` for consumer projects: 3.3.7 → 3.3.8 |
+
+**Downstream migration (sbt 1.x → 2.x):**
+
+| Item | Action |
+|------|--------|
+| `project/build.properties` | Set `sbt.version=2.0.2` |
+| `project/plugins.sbt` | Upgrade `sbt-beangle-parent` to this version |
+| `build.sbt` | Remove `ThisBuild /` prefix; change `url(...)` to `uri(...)` |
+| Shell syntax | Use slash syntax (`Test/compile`); quote multi-commands: `sbt "clean ; compile"` |
+| Tests | Use `testFull` for full test runs (sbt 2 `test` is incremental) |
+| CI | Update test report paths to `target/out/**/test-reports/*.xml` |
+| JDK | Require JDK 17+ |
+
 ## 0.15.14-SNAPSHOT (2026-06-15)
 
 | Area | Change |

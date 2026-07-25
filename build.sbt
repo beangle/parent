@@ -1,23 +1,23 @@
-import BuildSettings._
-import sbt._
+import BuildSettings.*
+import sbt.*
 
-ThisBuild / version := "0.15.15-SNAPSHOT"
-ThisBuild / description := "Beangle Parent."
-ThisBuild / organization := "org.beangle.parent"
-ThisBuild / homepage := Some(url("https://github.com/beangle/parent"))
-ThisBuild / scmInfo := Some(
+version := "0.15.15-SNAPSHOT"
+description := "Beangle Parent."
+organization := "org.beangle.parent"
+homepage := Some(uri("https://github.com/beangle/parent"))
+scmInfo := Some(
   ScmInfo(
-    url("https://github.com/beangle/bom"),
+    uri("https://github.com/beangle/bom"),
     "scm:git@github.com:beangle/parent.git"
   )
 )
 
-ThisBuild / developers := List(
+developers := List(
   Developer(
     id = "duantihua",
     name = "Duan Tihua",
     email = "duantihua@163.com",
-    url = url("https://github.com/duantihua")
+    url = uri("https://github.com/duantihua")
   )
 )
 

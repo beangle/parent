@@ -52,7 +52,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   //jpa
   val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.1.Final"
-  val hibernate_jcache = "org.hibernate.orm" % "hibernate-jcache" % "7.4.1.Final" exclude("org.hibernate.orm", "hibernate-core")
+  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.1.Final").exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.8"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
 
@@ -60,21 +60,26 @@ object Dependencies extends sbt.AutoPlugin {
   val jna = "net.java.dev.jna" % "jna" % "5.19.1"
 
   //doc
-  val poi = "org.apache.poi" % "poi" % "5.5.1" exclude("org.apache.logging.log4j", "*")
-  val poi_ooxml = "org.apache.poi" % "poi-ooxml" % "5.5.1" exclude("org.apache.logging.log4j", "*")
+  val poi = ("org.apache.poi" % "poi" % "5.5.1").exclude("org.apache.logging.log4j", "*")
+  val poi_ooxml = ("org.apache.poi" % "poi-ooxml" % "5.5.1").exclude("org.apache.logging.log4j", "*")
   val itext_kernel = "com.itextpdf" % "kernel" % "9.6.0"
   val itext_layout = "com.itextpdf" % "layout" % "9.6.0"
   val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.6.0"
 
   val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.7"
-  val jodconverter_local = "org.jodconverter" % "jodconverter-local" % "4.4.11" exclude("org.openoffice", "*")
+  val jodconverter_local = ("org.jodconverter" % "jodconverter-local" % "4.4.11").exclude("org.openoffice", "*")
   val libreoffice = "org.libreoffice" % "libreoffice" % "26.2.2"
 
   //cache
   val ehcache = "org.ehcache" % "ehcache" % "3.12.0"
   val caffeine = "com.github.ben-manes.caffeine" % "caffeine" % "3.2.4"
-  val caffeine_jcache = "com.github.ben-manes.caffeine" % "jcache" % "3.2.4" exclude("org.osgi", "org.osgi.service.component.annotations") exclude("javax.inject", "javax.inject")
-  val jedis = "redis.clients" % "jedis" % "7.5.2" exclude("com.google.code.gson", "gson") exclude("org.json", "json") exclude("org.slf4j", "*")
+  val caffeine_jcache = ("com.github.ben-manes.caffeine" % "jcache" % "3.2.4")
+    .exclude("org.osgi", "org.osgi.service.component.annotations")
+    .exclude("javax.inject", "javax.inject")
+  val jedis = ("redis.clients" % "jedis" % "7.5.2")
+    .exclude("com.google.code.gson", "gson")
+    .exclude("org.json", "json")
+    .exclude("org.slf4j", "*")
   val lettuce = "io.lettuce" % "lettuce-core" % "7.6.0.RELEASE"
   val jgroups = "org.jgroups" % "jgroups" % "5.5.5.Final"
 
@@ -98,7 +103,7 @@ object Dependencies extends sbt.AutoPlugin {
   val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.6.2"
 
   //db drivers
-  val postgresql = "org.postgresql" % "postgresql" % "42.7.11" exclude("org.checkerframework", "checker-qual")
+  val postgresql = ("org.postgresql" % "postgresql" % "42.7.11").exclude("org.checkerframework", "checker-qual")
   val h2 = "com.h2database" % "h2" % "2.4.240"
   val HikariCP = "com.zaxxer" % "HikariCP" % "7.0.2"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
