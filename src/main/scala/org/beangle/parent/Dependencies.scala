@@ -24,9 +24,9 @@ object Dependencies extends sbt.AutoPlugin {
   //log
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.18"
   val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.18"
-  val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.26.0"
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.5.34"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.5.34"
+  val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.26.1"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.6.1"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.6.1"
 
   //config
   val snakeyaml = "org.yaml" % "snakeyaml" % "2.6"
@@ -44,6 +44,7 @@ object Dependencies extends sbt.AutoPlugin {
 
   //serialization
   val protobuf = "com.google.protobuf" % "protobuf-java" % "4.35.1"
+  val msgpack = "org.msgpack" % "msgpack-core" % "0.9.12"
 
   //cdi
   val spring_beans = "org.springframework" % "spring-beans" % "7.0.8"
@@ -51,8 +52,8 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_aop = "org.springframework" % "spring-aop" % "7.0.8"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.1.Final"
-  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.1.Final").exclude("org.hibernate.orm", "hibernate-core")
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.5.Final"
+  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.5.Final").exclude("org.hibernate.orm", "hibernate-core")
   val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.8"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
 
@@ -62,11 +63,11 @@ object Dependencies extends sbt.AutoPlugin {
   //doc
   val poi = ("org.apache.poi" % "poi" % "5.5.1").exclude("org.apache.logging.log4j", "*")
   val poi_ooxml = ("org.apache.poi" % "poi-ooxml" % "5.5.1").exclude("org.apache.logging.log4j", "*")
-  val itext_kernel = "com.itextpdf" % "kernel" % "9.6.0"
-  val itext_layout = "com.itextpdf" % "layout" % "9.6.0"
-  val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.6.0"
+  val itext_kernel = "com.itextpdf" % "kernel" % "9.7.1"
+  val itext_layout = "com.itextpdf" % "layout" % "9.7.1"
+  val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.7.1"
 
-  val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.7"
+  val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.8"
   val jodconverter_local = ("org.jodconverter" % "jodconverter-local" % "4.4.11").exclude("org.openoffice", "*")
   val libreoffice = "org.libreoffice" % "libreoffice" % "26.2.2"
 
@@ -76,12 +77,12 @@ object Dependencies extends sbt.AutoPlugin {
   val caffeine_jcache = ("com.github.ben-manes.caffeine" % "jcache" % "3.2.4")
     .exclude("org.osgi", "org.osgi.service.component.annotations")
     .exclude("javax.inject", "javax.inject")
-  val jedis = ("redis.clients" % "jedis" % "7.5.2")
+  val jedis = ("redis.clients" % "jedis" % "7.5.3")
     .exclude("com.google.code.gson", "gson")
     .exclude("org.json", "json")
     .exclude("org.slf4j", "*")
   val lettuce = "io.lettuce" % "lettuce-core" % "7.6.0.RELEASE"
-  val jgroups = "org.jgroups" % "jgroups" % "5.5.5.Final"
+  val jgroups = "org.jgroups" % "jgroups" % "5.5.6.Final"
 
   // network
   val netty_common = "io.netty" % "netty-common" % "4.2.9.Final"
@@ -96,26 +97,26 @@ object Dependencies extends sbt.AutoPlugin {
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.20" % "test"
   val mockito = "org.mockito" % "mockito-core" % "5.23.0" % "test"
-  val greenmail = "com.icegreen" % "greenmail" % "2.1.8" % "test"
+  val greenmail = "com.icegreen" % "greenmail" % "2.1.12" % "test"
 
   //script
-  val aviator = "com.googlecode.aviator" % "aviator" % "5.4.3"
-  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.6.2"
+  val aviator = "com.googlecode.aviator" % "aviator" % "5.4.4"
+  val jexl3 = "org.apache.commons" % "commons-jexl3" % "3.7.0"
 
   //db drivers
-  val postgresql = ("org.postgresql" % "postgresql" % "42.7.11").exclude("org.checkerframework", "checker-qual")
+  val postgresql = ("org.postgresql" % "postgresql" % "42.7.13").exclude("org.checkerframework", "checker-qual")
   val h2 = "com.h2database" % "h2" % "2.4.240"
-  val HikariCP = "com.zaxxer" % "HikariCP" % "7.0.2"
+  val HikariCP = "com.zaxxer" % "HikariCP" % "7.1.0"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
-  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.2.0.0"
-  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.2.0.0"
-  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "9.7.0"
+  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.3.0.0"
+  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.3.0.0"
+  val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "26.7.0"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.2.1.jre11"
 
   //web container
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.22"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.3.24.Final"
-  val io_undertow_servlet = "io.undertow" % "undertow-servlet" % "2.3.24.Final"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.24"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.4.2.Final"
+  val io_undertow_servlet = "io.undertow.ee" % "undertow-servlet" % "2.0.1.Final"
 
   override def trigger = allRequirements
 
