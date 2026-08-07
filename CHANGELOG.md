@@ -1,6 +1,33 @@
 # Changelog
 
-## 0.15.15-SNAPSHOT (2026-07-14)
+## 0.16.1 (2026-08-07)
+
+| Area | Change |
+|------|--------|
+| build | Upgrade sbt to 2.0.5 |
+
+| Dependency | From | To |
+|------------|------|-----|
+| log4j-to-slf4j | 2.26.0 | 2.26.1 |
+| logback (classic, core) | 1.5.34 | 1.6.1 |
+| msgpack-core | — | 0.9.12 (new) |
+| Hibernate (core, jcache) | 7.4.1.Final | 7.4.5.Final |
+| iText (kernel, layout, bouncy-castle) | 9.6.0 | 9.7.1 |
+| pdfbox | 3.0.7 | 3.0.8 |
+| jedis | 7.5.2 | 7.5.3 |
+| jgroups | 5.5.5.Final | 5.5.6.Final |
+| greenmail | 2.1.8 | 2.1.12 |
+| aviator | 5.4.3 | 5.4.4 |
+| jexl3 | 3.6.2 | 3.7.0 |
+| postgresql | 42.7.11 | 42.7.13 |
+| HikariCP | 7.0.2 | 7.1.0 |
+| Oracle (ojdbc11, orai18n) | 23.26.2.0.0 | 23.26.3.0.0 |
+| mysql-connector-j | 9.7.0 | 26.7.0 |
+| tomcat-embed-core | 11.0.22 | 11.0.24 |
+| undertow-core | 2.3.24.Final | 2.4.2.Final |
+| undertow-servlet | 2.3.24.Final | 2.0.1.Final (`io.undertow` → `io.undertow.ee`) |
+
+## 0.16.0 (2026-07-14)
 
 | Area | Change |
 |------|--------|
@@ -21,7 +48,7 @@
 | CI | Update test report paths to `target/out/**/test-reports/*.xml` |
 | JDK | Require JDK 17+ |
 
-## 0.15.14-SNAPSHOT (2026-06-15)
+## 0.15.14 (2026-06-15)
 
 | Area | Change |
 |------|--------|
