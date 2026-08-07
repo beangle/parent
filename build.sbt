@@ -1,7 +1,7 @@
 import BuildSettings.*
 import sbt.*
 
-version := "0.16.1-SNAPSHOT"
+version := "0.16.1"
 description := "Beangle Parent."
 organization := "org.beangle.parent"
 homepage := Some(uri("https://github.com/beangle/parent"))
