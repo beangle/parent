@@ -25,8 +25,8 @@ object Dependencies extends sbt.AutoPlugin {
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.18"
   val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.18"
   val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.26.1"
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.6.1"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.6.1"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.6.3"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.6.3"
 
   //config
   val snakeyaml = "org.yaml" % "snakeyaml" % "2.6"
@@ -39,22 +39,22 @@ object Dependencies extends sbt.AutoPlugin {
   val servletapi = "jakarta.servlet" % "jakarta.servlet-api" % "6.1.0"
   val websocketapi = "jakarta.websocket" % "jakarta.websocket-api" % "2.2.0"
   val websocket_client_api = "jakarta.websocket" % "jakarta.websocket-client-api" % "2.2.0"
-  var freemarker = "org.freemarker" % "freemarker" % "2.3.34"
+  var freemarker = "org.freemarker" % "freemarker" % "2.3.35"
   val java_websocket = "org.java-websocket" % "Java-WebSocket" % "1.6.0"
 
   //serialization
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.35.1"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.36.0"
   val msgpack = "org.msgpack" % "msgpack-core" % "0.9.12"
 
   //cdi
-  val spring_beans = "org.springframework" % "spring-beans" % "7.0.8"
-  val spring_tx = "org.springframework" % "spring-tx" % "7.0.8"
-  val spring_aop = "org.springframework" % "spring-aop" % "7.0.8"
+  val spring_beans = "org.springframework" % "spring-beans" % "7.0.9"
+  val spring_tx = "org.springframework" % "spring-tx" % "7.0.9"
+  val spring_aop = "org.springframework" % "spring-aop" % "7.0.9"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.5.Final"
-  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.5.Final").exclude("org.hibernate.orm", "hibernate-core")
-  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.8"
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.6.Final"
+  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.6.Final").exclude("org.hibernate.orm", "hibernate-core")
+  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.12"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
 
   //jna
@@ -77,11 +77,11 @@ object Dependencies extends sbt.AutoPlugin {
   val caffeine_jcache = ("com.github.ben-manes.caffeine" % "jcache" % "3.2.4")
     .exclude("org.osgi", "org.osgi.service.component.annotations")
     .exclude("javax.inject", "javax.inject")
-  val jedis = ("redis.clients" % "jedis" % "7.5.3")
+  val jedis = ("redis.clients" % "jedis" % "8.0.1")
     .exclude("com.google.code.gson", "gson")
     .exclude("org.json", "json")
     .exclude("org.slf4j", "*")
-  val lettuce = "io.lettuce" % "lettuce-core" % "7.6.0.RELEASE"
+  val lettuce = "io.lettuce" % "lettuce-core" % "7.7.0.RELEASE"
   val jgroups = "org.jgroups" % "jgroups" % "5.5.6.Final"
 
   // network
@@ -97,7 +97,7 @@ object Dependencies extends sbt.AutoPlugin {
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.20" % "test"
   val mockito = "org.mockito" % "mockito-core" % "5.23.0" % "test"
-  val greenmail = "com.icegreen" % "greenmail" % "2.1.12" % "test"
+  val greenmail = "com.icegreen" % "greenmail" % "2.1.13" % "test"
 
   //script
   val aviator = "com.googlecode.aviator" % "aviator" % "5.4.4"
@@ -114,9 +114,9 @@ object Dependencies extends sbt.AutoPlugin {
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.2.1.jre11"
 
   //web container
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.24"
-  val io_undertow_core = "io.undertow" % "undertow-core" % "2.4.2.Final"
-  val io_undertow_servlet = "io.undertow.ee" % "undertow-servlet" % "2.0.1.Final"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.25"
+  val io_undertow_core = "io.undertow" % "undertow-core" % "2.4.3.Final"
+  val io_undertow_servlet = "io.undertow.ee" % "undertow-servlet" % "2.0.2.Final"
 
   override def trigger = allRequirements
 
