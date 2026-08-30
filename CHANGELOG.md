@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.16.2 (2026-08-11)
+
+| Area | Change |
+|------|--------|
+| build | Upgrade sbt to 2.0.8 |
+
+| Dependency | From | To |
+|------------|------|-----|
+| logback (classic, core) | 1.6.1 | 1.6.3 |
+| freemarker | 2.3.34 | 2.3.35 |
+| protobuf-java | 4.35.1 | 4.36.0 |
+| Spring (beans, tx, aop) | 7.0.8 | 7.0.9 |
+| Hibernate (core, jcache) | 7.4.5.Final | 7.4.6.Final |
+| byte-buddy | 1.18.8 | 1.18.12 |
+| jedis | 7.5.3 | 8.0.1 |
+| lettuce-core | 7.6.0.RELEASE | 7.7.0.RELEASE |
+| greenmail | 2.1.12 | 2.1.13 |
+| tomcat-embed-core | 11.0.24 | 11.0.25 |
+| undertow-core | 2.4.2.Final | 2.4.3.Final |
+| undertow-servlet | 2.0.1.Final | 2.0.2.Final |
+
 ## 0.16.1 (2026-08-07)
 
 | Area | Change |
