@@ -22,14 +22,14 @@ import sbt.*
 object Dependencies extends sbt.AutoPlugin {
 
   //log
-  val slf4j = "org.slf4j" % "slf4j-api" % "2.0.18"
-  val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.18"
+  val slf4j = "org.slf4j" % "slf4j-api" % "2.0.19"
+  val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.19"
   val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.26.1"
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.6.3"
   val logback_core = "ch.qos.logback" % "logback-core" % "1.6.3"
 
   //config
-  val snakeyaml = "org.yaml" % "snakeyaml" % "2.6"
+  val snakeyaml = "org.yaml" % "snakeyaml" % "2.7"
   val typesafe_config = "com.typesafe" % "config" % "1.4.9"
 
   // file
@@ -43,7 +43,7 @@ object Dependencies extends sbt.AutoPlugin {
   val java_websocket = "org.java-websocket" % "Java-WebSocket" % "1.6.0"
 
   //serialization
-  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.36.0"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "4.36.2"
   val msgpack = "org.msgpack" % "msgpack-core" % "0.9.12"
 
   //cdi
@@ -52,9 +52,9 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_aop = "org.springframework" % "spring-aop" % "7.0.9"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.6.Final"
-  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.6.Final").exclude("org.hibernate.orm", "hibernate-core")
-  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.12"
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.9.Final"
+  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.9.Final").exclude("org.hibernate.orm", "hibernate-core")
+  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.14"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
 
   //jna
@@ -82,18 +82,18 @@ object Dependencies extends sbt.AutoPlugin {
     .exclude("org.json", "json")
     .exclude("org.slf4j", "*")
   val lettuce = "io.lettuce" % "lettuce-core" % "7.7.0.RELEASE"
-  val jgroups = "org.jgroups" % "jgroups" % "5.5.6.Final"
+  val jgroups = "org.jgroups" % "jgroups" % "5.5.7.Final"
 
   // network
-  val netty_common = "io.netty" % "netty-common" % "4.2.9.Final"
-  val netty_handler = "io.netty" % "netty-handler" % "4.2.9.Final"
-  val netty_transport = "io.netty" % "netty-transport" % "4.2.9.Final"
+  val netty_common = "io.netty" % "netty-common" % "4.2.18.Final"
+  val netty_handler = "io.netty" % "netty-handler" % "4.2.18.Final"
+  val netty_transport = "io.netty" % "netty-transport" % "4.2.18.Final"
 
   //mail
   val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.1.5"
   val jakarta_mail_angus = "org.eclipse.angus" % "angus-mail" % "2.0.5"
 
-  val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2025.10"
+  val plantuml = "net.sourceforge.plantuml" % "plantuml" % "1.2026.8"
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.20" % "test"
   val mockito = "org.mockito" % "mockito-core" % "5.23.0" % "test"
@@ -105,16 +105,16 @@ object Dependencies extends sbt.AutoPlugin {
 
   //db drivers
   val postgresql = ("org.postgresql" % "postgresql" % "42.7.13").exclude("org.checkerframework", "checker-qual")
-  val h2 = "com.h2database" % "h2" % "2.4.240"
+  val h2 = "com.h2database" % "h2" % "2.5.250"
   val HikariCP = "com.zaxxer" % "HikariCP" % "7.1.0"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
   val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.3.0.0"
   val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.3.0.0"
   val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "26.7.0"
-  val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.2.1.jre11"
+  val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.6.0.jre11"
 
   //web container
-  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.25"
+  val tomcat_embed_core = "org.apache.tomcat.embed" % "tomcat-embed-core" % "11.0.26"
   val io_undertow_core = "io.undertow" % "undertow-core" % "2.4.3.Final"
   val io_undertow_servlet = "io.undertow.ee" % "undertow-servlet" % "2.0.2.Final"
 

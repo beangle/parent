@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.17.0
+
+| Area | Change |
+|------|--------|
+| scala | Default scalaVersion for consumer projects: 3.3.8 → 3.9.0 (LTS) |
+| build | Upgrade sbt to 2.0.9 |
+| build | Add `-Xcheck-macros` to scalacOptions（宏卫生检查，跨 splice 复用 Expr 等写法会直接报错） |
+| build | Require JDK 25+: `scalacOptions -Xtarget:25`、`javacOptions --release 25` |
+
+| Dependency | From | To |
+|------------|------|-----|
+| slf4j (api, jul-to-slf4j) | 2.0.18 | 2.0.19 |
+| snakeyaml | 2.6 | 2.7 |
+| protobuf-java | 4.36.0 | 4.36.2 |
+| byte-buddy | 1.18.12 | 1.18.14 |
+| plantuml | 1.2025.10 | 1.2026.8 |
+| jgroups | 5.5.6.Final | 5.5.7.Final |
+| netty (common, handler, transport) | 4.2.9.Final | 4.2.18.Final |
+| h2 | 2.4.240 | 2.5.250 |
+| mssql-jdbc | 13.2.1.jre11 | 13.6.0.jre11 |
+| tomcat-embed-core | 11.0.25 | 11.0.26 |
+
 ## 0.16.2 (2026-08-11)
 
 | Area | Change |
