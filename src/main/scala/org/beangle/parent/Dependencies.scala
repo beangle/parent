@@ -70,7 +70,6 @@ object Dependencies extends sbt.AutoPlugin {
   val itext_bouncy_castle_adapter = "com.itextpdf" % "bouncy-castle-adapter" % "9.8.0"
 
   val pdfbox = "org.apache.pdfbox" % "pdfbox" % "3.0.8"
-  val jodconverter_local = ("org.jodconverter" % "jodconverter-local" % "5.1.1").exclude("org.openoffice", "*")
   val libreoffice = "org.libreoffice" % "libreoffice" % "26.2.2"
 
   //cache
