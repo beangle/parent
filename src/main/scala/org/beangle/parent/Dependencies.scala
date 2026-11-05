@@ -25,8 +25,8 @@ object Dependencies extends sbt.AutoPlugin {
   val slf4j = "org.slf4j" % "slf4j-api" % "2.0.20"
   val jul_to_slf4j = "org.slf4j" % "jul-to-slf4j" % "2.0.20"
   val log4j_to_slf4j = "org.apache.logging.log4j" % "log4j-to-slf4j" % "2.26.1"
-  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.6.5"
-  val logback_core = "ch.qos.logback" % "logback-core" % "1.6.5"
+  val logback_classic = "ch.qos.logback" % "logback-classic" % "1.6.6"
+  val logback_core = "ch.qos.logback" % "logback-core" % "1.6.6"
 
   //config
   val snakeyaml = "org.yaml" % "snakeyaml" % "2.7"
@@ -52,17 +52,17 @@ object Dependencies extends sbt.AutoPlugin {
   val spring_aop = "org.springframework" % "spring-aop" % "7.0.10"
 
   //jpa
-  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.9.Final"
-  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.9.Final").exclude("org.hibernate.orm", "hibernate-core")
-  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.15"
+  val hibernate_core = "org.beangle.hibernate" % "beangle-hibernate-core" % "7.4.14.Final"
+  val hibernate_jcache = ("org.hibernate.orm" % "hibernate-jcache" % "7.4.14.Final").exclude("org.hibernate.orm", "hibernate-core")
+  val byte_buddy = "net.bytebuddy" % "byte-buddy" % "1.18.17"
   val jpa = "jakarta.persistence" % "jakarta.persistence-api" % "3.2.0"
 
   //jna
   val jna = "net.java.dev.jna" % "jna" % "5.19.1"
 
   //doc
-  val poi = ("org.apache.poi" % "poi" % "5.5.1").exclude("org.apache.logging.log4j", "*")
-  val poi_ooxml = ("org.apache.poi" % "poi-ooxml" % "5.5.1").exclude("org.apache.logging.log4j", "*")
+  val poi = ("org.apache.poi" % "poi" % "6.0.0").exclude("org.apache.logging.log4j", "*")
+  val poi_ooxml = ("org.apache.poi" % "poi-ooxml" % "6.0.0").exclude("org.apache.logging.log4j", "*")
   val itext_kernel = "com.itextpdf" % "kernel" % "9.8.0"
   val itext_layout = "com.itextpdf" % "layout" % "9.8.0"
   val itext_forms = "com.itextpdf" % "forms" % "9.8.0"
@@ -86,9 +86,9 @@ object Dependencies extends sbt.AutoPlugin {
   val jgroups = "org.jgroups" % "jgroups" % "5.5.8.Final"
 
   // network
-  val netty_common = "io.netty" % "netty-common" % "4.2.18.Final"
-  val netty_handler = "io.netty" % "netty-handler" % "4.2.18.Final"
-  val netty_transport = "io.netty" % "netty-transport" % "4.2.18.Final"
+  val netty_common = "io.netty" % "netty-common" % "4.2.19.Final"
+  val netty_handler = "io.netty" % "netty-handler" % "4.2.19.Final"
+  val netty_transport = "io.netty" % "netty-transport" % "4.2.19.Final"
 
   //mail
   val jakarta_mail_api = "jakarta.mail" % "jakarta.mail-api" % "2.1.5"
@@ -98,7 +98,7 @@ object Dependencies extends sbt.AutoPlugin {
   //test
   val scalatest = "org.scalatest" %% "scalatest" % "3.2.20" % "test"
   val mockito = "org.mockito" % "mockito-core" % "5.24.0" % "test"
-  val greenmail = "com.icegreen" % "greenmail" % "2.1.14" % "test"
+  val greenmail = "com.icegreen" % "greenmail" % "2.1.15" % "test"
 
   //script
   val aviator = "com.googlecode.aviator" % "aviator" % "5.4.4"
@@ -109,8 +109,8 @@ object Dependencies extends sbt.AutoPlugin {
   val h2 = "com.h2database" % "h2" % "2.5.252"
   val HikariCP = "com.zaxxer" % "HikariCP" % "7.1.0"
   val jtds = "net.sourceforge.jtds" % "jtds" % "1.3.1"
-  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.3.0.0"
-  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.3.0.0"
+  val ojdbc11 = "com.oracle.database.jdbc" % "ojdbc11" % "23.26.4.0.0"
+  val orai18n = "com.oracle.database.nls" % "orai18n" % "23.26.4.0.0"
   val mysql_connector_java = "com.mysql" % "mysql-connector-j" % "26.10.0"
   val mssql_jdbc = "com.microsoft.sqlserver" % "mssql-jdbc" % "13.6.0.jre11"
 
